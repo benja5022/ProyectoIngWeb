@@ -17,7 +17,7 @@ padding: 10px;
 }
 
 /*orden de los menus*/
-.grid-container{
+/*.grid-container{
     gap: 10px;
     grid-template-areas: 
     "primero"
@@ -76,7 +76,7 @@ transition: 2s;
 
 /*menu navegacion*/
 .menu-navegacion{
-    /*background: linear-gradient(165deg,#71b7e6,#9b59b6);*/
+
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -92,6 +92,28 @@ nav ul,li{
     list-style: none;
     margin-left: 20px;
     float: left;
+}
+
+nav ul,li a{
+  text-decoration: none;
+  color: #444;
+  font-weight: bold; 
+ 
+}
+
+nav ul,li a::before{
+   display: block;
+   content: '';
+   width: 0%;
+   background: #444;
+   height: 5px;
+   top: 0;
+   position: absolute;
+   transition: width 0.2s;
+}
+
+nav ul,li a:hover::before{
+   width: 100%;
 }
 
 /*logo*/
@@ -176,12 +198,8 @@ background: #40D3DC;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
-    /*align-items: center;
-    justify-content: center;
-    position: absolute;*/
     box-shadow: 5px 8px 12px black;
     padding: 25 30px;
-    /*margin-top: 900px;*/
     margin-left: 100px;
 }
 
@@ -192,12 +210,6 @@ background: #40D3DC;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
-    /*align-items: center;
-    justify-content: center;
-    position: absolute;*/
-    /*box-shadow: 5px 8px 12px black;
-    padding: 25 30px;
-    /*margin-top: 900px;*/
     margin-left: 500px;
 
 }
@@ -211,7 +223,6 @@ background: #40D3DC;
 
 .registracion .title::before{
     bottom: 0;
-    /*left: 0;*/
     content: '';
     position: absolute;
     height: 3px;
