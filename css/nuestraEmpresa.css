@@ -1,0 +1,127 @@
+
+body{
+    background: linear-gradient(165deg,#71b7e6,#9b59b6);
+    width: fit-content;
+    height: fit-content;
+}
+
+header{
+    text-align: center;
+}
+
+#nuestraEmpresa{
+    
+    /* background-color:azure; */
+}
+
+#somos{
+    /* background-color: beige; */
+}
+
+#mision{
+    /* background-color: brown; */
+}
+
+#objetivos{
+    /* background-color: blueviolet; */
+}
+
+#cronologia{
+    text-align: center;
+    /* background-color: rgb(210, 0, 250); */
+}
+
+h2{
+    font-family: 'Open Sans';
+    text-align: center;
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.grid-container > *{
+    /*box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    /*border-radius:4px ;*/
+    padding: 10px;
+    /*text-align: center;*/
+}
+
+div{
+    inline-size: auto;
+    background: whitesmoke;
+    text-align: center;
+    width: 90%;
+    height: 20%;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    box-shadow: 5px 5px 5px black;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    
+}
+
+h2{
+    font-size: 40px;
+    padding: 1rem;
+}
+
+footer{
+    color: white;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px 0;
+    /* height: 30%; */
+
+}
+
+
+
+#contactoFooter ul{
+    list-style-type: none;
+}
+
+#contactoFooter li{
+    float:right;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;    
+}
+
+#contactoFooter li a{
+    text-decoration:none;
+    color:white;
+}
+
+#contactoFooter li a:hover{
+    color:gray;
+}
+
+#logo2{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+#logo2:hover{
+    color:gray;
+}
+
+#direccion{
+    
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;    
+}
+
+
