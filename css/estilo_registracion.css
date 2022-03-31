@@ -4,9 +4,6 @@ body{
     margin: 0;
     padding: 0px;
     height: 100vh;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
      background: linear-gradient(165deg,#71b7e6,#9b59b6);
      min-height: 100%;
 }
@@ -15,28 +12,12 @@ html{
     height: 100%;
 }
 
-/*@media (max-width: 584px){
-   .contenedor{ 
-       max-width: 500px;
-   }
-   .contenedor-registracion{
-       max-width: 500px;
-   }
-   .registracion{
-       max-width: 500px;
-   }
-}*/
-
 .grid-container > *{
-/*box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-/*border-radius:4px ;*/
 padding: 10px;
-/*text-align: center;*/
 }
 
 /*orden de los menus*/
 .grid-container{
-    /*display: flex;*/
     gap: 10px;
     grid-template-areas: 
     "primero"
@@ -47,7 +28,6 @@ padding: 10px;
 
 .encabezado{
     grid-area: primero;
-    
 }
 
 .registrar{
@@ -65,23 +45,22 @@ padding: 10px;
     width: 1700px;
     height: 800px;
     border-radius: 20px;
-    background-color: white;
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
     padding: 15px;
     margin-left: 100px;
 }
 
+
 .slides{
     width: 630%;
     height: 800px;
-    position: relative;
     display: flex;
 }
 
 .slides input{
 display: none;
-
+position: relative;
 }
 
 .slide{
@@ -95,6 +74,34 @@ transition: 2s;
     margin-left: -400px;
 }
 
+/*menu navegacion*/
+.menu-navegacion{
+    /*background: linear-gradient(165deg,#71b7e6,#9b59b6);*/
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+     width: 1700px;
+     height: 50px;
+     padding: 8px;
+     display: flex;
+     justify-content: right;
+}
+
+nav ul,li{
+    list-style: none;
+    margin-left: 20px;
+    float: left;
+}
+
+/*logo*/
+.logo-imagen{
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+}
+
 /*iconos del modo manual de las imagenes*/
 
 .navigation-manual{
@@ -105,6 +112,7 @@ display: flex;
 justify-content: center;
 
 }
+
 
 .manual-btn{
 border: 2px solid #23E3C9;
