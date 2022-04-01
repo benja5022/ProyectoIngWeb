@@ -8,35 +8,46 @@
 
     
         <body class ="grid-container">
-
         <!--inicio de las imagenes slide-->
-        <main class="encabezado">         
+        <section id="primero">   
           <div class="contenedor">
+              <!--logo-->
+            <div class="logo-imagen">
+                <img src="images/logo.png" alt="">
+            </div> 
+            <!--menu de opciones-->
+            <div class ="contenedor-navegacion">
+            <div class="menu-navegacion">
+               <ul>
+                   <li><a href="#">Inicio</a></li>
+                   <li><a href="#">Productos</a></li>
+                   <li><a href="#">Registrate</a></li>
+                   <li><a href="#">Nuestra empresa</a></li>
+                </ul>
+            </div>
+            </div>
+            <!--botones y imagenes slides-->
           <div class="slides">
               <!--inicio botones-->
             <input type="radio" name="radio-btn" id="radio1">             
             <input type="radio" name="radio-btn" id="radio2">   
           <!--inicio de las imagenes slide-->
           <div class="slide first">
-              <img src="imagenes/animalPetro.jpg"  alt="">
+              <img src="images/animalPetro.jpg"  alt="">
           </div>
 
           <div class="slide">
-            <img src="imagenes/petroleo.jpg"  alt="">
+            <img src="images/petroleo.jpg"  alt="">
         </div>
+
+
          
-        <!--logo-->
-        <div class="logo">
-            <img src="imagenes/" alt="">
-
-        </div>
-
         <!--navegacion automatica-->
         <div class="navegation-auto">
             <div class="auto-btn1"></div>
             <div class="auto-btn2"></div>
         </div>
-          
+   
         <!--navegacion manual-->
         <div class="navigation-manual">
             <label for="radio1" class="manual-btn"></label>
@@ -58,9 +69,9 @@
             }, 5000);
 
         </script>
-        </main>
+        </section>
 
-    <article class = "registrar">
+    <section id="segundo">
         <!--parte de la registacion-->
         <div class = "contenedor-registracion">
         <div class = "registracion">
@@ -121,13 +132,13 @@
             </from>
         </div>  
     </div>
-    </article>
+    </section>
      
-    <footer class="pie">
+    <section id="tercero">
      <div class ="contenedor-pie">
 
      </div>
-    </footer>
+    </section>
 
 
     

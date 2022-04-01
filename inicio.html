@@ -5,53 +5,93 @@
         <meta charset="utf-8">
         <link rel="stylesheet"  href="css/estilos_inicio.css" type="text/css">
     </head>
-        <body>
-            <!--inicio de las imagenes slide-->
-          <div class="contenedor">
-          <div class="slides">
-              <!--inicio botones-->
-            <input type="radio" name="radio-btn" id="radio1">             
-            <input type="radio" name="radio-btn" id="radio2">   
+            <body class ="grid-container">
+                <!--inicio de las imagenes slide-->
+                <section id="primweo">   
+                  <div class="contenedor">
+                      <!--logo-->
+                    <div class="logo-imagen">
+                        <img src="images/logo.png" alt="">
+                    </div> 
+                    <!--menu de opciones-->
+                    <div class ="contenedor-navegacion">
+                    <div class="menu-navegacion">
+                       <ul>
+                           <li><a href="#">Inicio</a></li>
+                           <li><a href="#">Productos</a></li>
+                           <li><a href="#">Registrate</a></li>
+                           <li><a href="#">Nuestra empresa</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <!--botones y imagenes slides-->
+                  <div class="slides">
+                      <!--inicio botones-->
+                    <input type="radio" name="radio-btn" id="radio1">             
+                    <input type="radio" name="radio-btn" id="radio2">   
+                  <!--inicio de las imagenes slide-->
+                  <div class="slide first">
+                      <img src="images/animalPetro.jpg"  alt="">
+                  </div>
+        
+                  <div class="slide">
+                    <img src="images/petroleo.jpg"  alt="">
+                </div>
+        
+        
+                 
+                <!--navegacion automatica-->
+                <div class="navegation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                </div>
+           
+                <!--navegacion manual-->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                </div>
+        
+                 </div>
+                </div>
+        
+                <!--funcionn con javascript para modo automatico-->
+                <script type="text/javascript">
+                    var counter = 1;
+                    setInterval(function(){
+                        document.getElementById('radio' + counter).checked = true;
+                        counter++;
+                        if(counter > 2){
+                            counter = 1;
+                        }
+                    }, 5000);
+        
+                </script>
+                </section>
 
-          <!--inicio de las imagenes slide-->
-          <div class="slide first">
-              <img src="images/animalPetro.jpg"  alt="">
-          </div>
+                <section id="segundo">
+                    <div class ="contenedor-noticias">
+                        <h2> Noticias </h2>
+                    </div>
 
-          <div class="slide">
-            <img src="images/petroleo.jpg"  alt="">
-        </div>
+                </section>
 
-        <!--navegacion automatica-->
-        <div class="navegation-auto">
-            <div class="auto-btn1"></div>
-            <div class="auto-btn2"></div>
-        </div>
-          
-        <!--navegacion manual-->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-        </div>
+                <section id="tercero">
+                    <div class ="contenedor-mision">
+                        <h2> Nuestra Misión </h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia repudiandae laboriosam recusandae reprehenderit.....</p>
+                        <div class="seguir-leyendo">
+                            <ul><li><a href="#">Seguir leyendo...</a></li></ul>
+                        </div>
+                    </div>
+                   
+                </section>
 
-         </div>
-        </div>
-
-        <!--funcionn con javascript para modo automatico-->
-        <script type="text/javascript">
-            var counter = 1;
-            setInterval(function(){
-                document.getElementById('radio' + counter).checked = true;
-                counter++;
-                if(counter > 2){
-                    counter = 1;
-                }
-            }, 5000);
-
-        </script>
-
-
-          
+                <section id="cuarto">
+                    <div class ="contenedor-pie">
+               
+                    </div>
+                </section>
         </body>
 
 
