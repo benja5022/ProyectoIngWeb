@@ -1,26 +1,50 @@
 
-/*configuracion del cuerpo de la pagina*/
 body{
     margin: 0;
-    padding: 0;
+    padding: 0px;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     background-color: #23E3C9;
+     background: linear-gradient(165deg,#71b7e6,#9b59b6);
+     min-height: 100%;
 }
 
+html{
+    height: 100%;
+}
+
+.grid-container > *{
+padding: 10px;
+}
+
+/*orden de los menus*/
+/*.grid-container{
+    gap: 10px;
+    grid-template-areas: 
+    "primero"
+    "segundo"
+    "tercero"
+    "cuarto"
+    ;
+}
+
+.encabezado{
+    grid-area: primero;
+}
+
+.noticias{
+    grid-area: segundo;
+}
+
+.nuestra-mision{
+    grid-area: tercero;
+}
+
+.pie{
+    grid-area: cuarto;
+}
+
+/*seccion de la imagenes en movimiento*/
 .contenedor{
-<<<<<<< Updated upstream
-width: 1800px;
-height: 800px;
-border-radius: 20px;
-background-color: white;
-overflow: hidden;
-box-shadow: 5px 8px 12px black;
-padding: 15px;
-margin-top: -30px;
-=======
+
     background: linear-gradient(165deg,#71b7e6,#9b59b6);
     text-align: center;
     width: 90%;
@@ -30,8 +54,9 @@ margin-top: -30px;
     box-shadow: 5px 8px 12px black;
     padding: 15px;
     margin-left: 100px;
->>>>>>> Stashed changes
+
 }
+
 
 .slides{
     width: 630%;
@@ -41,7 +66,7 @@ margin-top: -30px;
 
 .slides input{
 display: none;
-
+position: relative;
 }
 
 .slide{
@@ -50,22 +75,21 @@ transition: 2s;
 }
 
 .slide img{
-<<<<<<< Updated upstream
-width: 1800px;
-height: 800px;
-=======
     width: 90%;
     height: 800px;
     margin-left: -400px;
 }
 
-/*el menu de navegacion*/
+
+}
+
+/*menu navegacion*/
 .menu-navegacion{
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     position: absolute;
-     width: 85%;
+     width: 1700px;
      height: 50px;
      padding: 8px;
      display: flex;
@@ -102,15 +126,13 @@ nav ul,li a:hover::before{
 
 /*logo*/
 .logo-imagen{
-    width: 90%;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     position: absolute;
->>>>>>> Stashed changes
 }
 
-/*modo manual de las imagenes*/
+/*iconos del modo manual de las imagenes*/
 
 .navigation-manual{
 position: absolute;
@@ -120,6 +142,7 @@ display: flex;
 justify-content: center;
 
 }
+
 
 .manual-btn{
 border: 2px solid #23E3C9;
@@ -145,7 +168,7 @@ transition: 1s;
     margin-left: -20%;
 }
 
-/*modo automatico de las imagenes*/
+/*iconos del modo automatico de las imagenes*/
 
 .navegation-auto{
     position: absolute;
@@ -173,8 +196,6 @@ background: #40D3DC;
 
 #radio2:checked ~ .navegation-auto .auto-btn2{
     background: #40D3DC;
-<<<<<<< Updated upstream
-=======
 }
 
 /*apartado de noticias*/
@@ -219,6 +240,7 @@ background: #40D3DC;
 
 .contenedor-mision{
     width: 90%;
+
     height: 150px;
     border-radius: 20px;
     padding: 25px 30px;
@@ -233,6 +255,7 @@ background: #40D3DC;
 .seguir-leyendo{
     position: absolute;
      width: 90%;
+
      height: 1000px;
      padding: 8px;
      display: flex;
@@ -243,7 +266,6 @@ background: #40D3DC;
         /*text-align: center;*/
         overflow: hidden;
 }
-
 
 
 
@@ -289,5 +311,17 @@ footer{
     margin-right: 10px;
     margin-top: 1px;
     padding: 0 4px;
->>>>>>> Stashed changes
+
+
+/*apartado footer*/
+
+.contenedor-pie{
+    width: 1680px;
+    height: 550px;
+    border-radius: 20px;
+    padding: 25px 30px;
+    background-color: white;
+    box-shadow: 5px 8px 12px black;
+    padding: 25 30px;
+    margin-left: 100px;
 }

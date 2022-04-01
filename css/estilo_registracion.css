@@ -4,9 +4,6 @@ body{
     margin: 0;
     padding: 0px;
     height: 100vh;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
      background: linear-gradient(165deg,#71b7e6,#9b59b6);
      min-height: 100%;
 }
@@ -15,28 +12,12 @@ html{
     height: 100%;
 }
 
-/*@media (max-width: 584px){
-   .contenedor{ 
-       max-width: 500px;
-   }
-   .contenedor-registracion{
-       max-width: 500px;
-   }
-   .registracion{
-       max-width: 500px;
-   }
-}*/
-
 .grid-container > *{
-/*box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-/*border-radius:4px ;*/
 padding: 10px;
-/*text-align: center;*/
 }
 
 /*orden de los menus*/
-.grid-container{
-    /*display: flex;*/
+/*.grid-container{
     gap: 10px;
     grid-template-areas: 
     "primero"
@@ -47,7 +28,6 @@ padding: 10px;
 
 .encabezado{
     grid-area: primero;
-    
 }
 
 .registrar{
@@ -65,23 +45,22 @@ padding: 10px;
     width: 90%;
     height: 100%;
     border-radius: 20px;
-    background-color: white;
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
     padding: 15px;
     margin-left: 100px;
 }
 
+
 .slides{
     width: 630%;
     height: 800px;
-    position: relative;
     display: flex;
 }
 
 .slides input{
 display: none;
-
+position: relative;
 }
 
 .slide{
@@ -95,9 +74,9 @@ transition: 2s;
     margin-left: -400px;
 }
 
-<<<<<<< Updated upstream
-=======
+
 /*el menu de navegacion*/
+
 .menu-navegacion{
 
     border-radius: 20px;
@@ -147,7 +126,6 @@ nav ul,li a:hover::before{
     position: absolute;
 }
 
->>>>>>> Stashed changes
 /*iconos del modo manual de las imagenes*/
 
 .navigation-manual{
@@ -158,6 +136,7 @@ display: flex;
 justify-content: center;
 
 }
+
 
 .manual-btn{
 border: 2px solid #23E3C9;
@@ -221,12 +200,8 @@ background: #40D3DC;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
-    /*align-items: center;
-    justify-content: center;
-    position: absolute;*/
     box-shadow: 5px 8px 12px black;
     padding: 25 30px;
-    /*margin-top: 900px;*/
     margin-left: 100px;
 }
 
@@ -237,12 +212,6 @@ background: #40D3DC;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
-    /*align-items: center;
-    justify-content: center;
-    position: absolute;*/
-    /*box-shadow: 5px 8px 12px black;
-    padding: 25 30px;
-    /*margin-top: 900px;*/
     margin-left: 500px;
 }
 
@@ -255,7 +224,6 @@ background: #40D3DC;
 
 .registracion .title::before{
     bottom: 0;
-    /*left: 0;*/
     content: '';
     position: absolute;
     height: 3px;
