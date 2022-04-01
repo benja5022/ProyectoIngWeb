@@ -11,6 +11,7 @@ body{
 }
 
 .contenedor{
+<<<<<<< Updated upstream
 width: 1800px;
 height: 800px;
 border-radius: 20px;
@@ -19,6 +20,17 @@ overflow: hidden;
 box-shadow: 5px 8px 12px black;
 padding: 15px;
 margin-top: -30px;
+=======
+    background: linear-gradient(165deg,#71b7e6,#9b59b6);
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 5px 8px 12px black;
+    padding: 15px;
+    margin-left: 100px;
+>>>>>>> Stashed changes
 }
 
 .slides{
@@ -38,15 +50,71 @@ transition: 2s;
 }
 
 .slide img{
+<<<<<<< Updated upstream
 width: 1800px;
 height: 800px;
+=======
+    width: 90%;
+    height: 800px;
+    margin-left: -400px;
+}
+
+/*el menu de navegacion*/
+.menu-navegacion{
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+     width: 85%;
+     height: 50px;
+     padding: 8px;
+     display: flex;
+     justify-content: right;
+}
+
+ nav ul,li{
+    list-style: none;
+    margin-left: 20px;
+    float: left;
+}
+
+ nav ul,li a{
+  text-decoration: none;
+  color: #444;
+  font-weight: bold; 
+ 
+}
+
+ nav ul,li a::before{
+   display: block;
+   content: '';
+   width: 0%;
+   background: #444;
+   height: 5px;
+   top: 0;
+   position: absolute;
+   transition: width 0.2s;
+}
+
+nav ul,li a:hover::before{
+   width: 100%;
+}
+
+/*logo*/
+.logo-imagen{
+    width: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+>>>>>>> Stashed changes
 }
 
 /*modo manual de las imagenes*/
 
 .navigation-manual{
 position: absolute;
-width: 1800px;
+width: 90%;
 margin-top: 700px;
 display: flex;
 justify-content: center;
@@ -82,7 +150,7 @@ transition: 1s;
 .navegation-auto{
     position: absolute;
     display: flex;
-    width: 1800px;
+    width: 90%;
     justify-content: center;
     margin-top: 700px;
 
@@ -105,4 +173,121 @@ background: #40D3DC;
 
 #radio2:checked ~ .navegation-auto .auto-btn2{
     background: #40D3DC;
+<<<<<<< Updated upstream
+=======
+}
+
+/*apartado de noticias*/
+.contenedor-noticias{
+    width: 90%;
+    height: 550px;
+    border-radius: 20px;
+    padding: 25px 30px;
+    background-color: white;
+    position: relative;
+    box-shadow: 5px 8px 12px black;
+    padding: 25 30px;
+    margin-left: 100px;
+}
+
+
+.contenedor-noticias img{
+    clip-path: circle();
+    height: 20%;
+    width: 20%;
+}
+
+#noticia1{
+    float: left;
+}
+
+#noticia2{
+    float: left;
+}
+
+.Mas-noticias{
+    position: absolute;
+     width: 90%;
+     height: 1300px;
+     padding: 8px;
+     display: flex;
+     justify-content: right;
+
+}
+
+/*apartado de nuestra mision*/
+
+.contenedor-mision{
+    width: 90%;
+    height: 150px;
+    border-radius: 20px;
+    padding: 25px 30px;
+    background-color: white;
+    box-shadow: 5px 8px 12px black;
+    position: relative;
+    padding: 1rem;
+    margin-left: 100px;
+    margin-right: 2%;
+}
+
+.seguir-leyendo{
+    position: absolute;
+     width: 90%;
+     height: 1000px;
+     padding: 8px;
+     display: flex;
+     justify-content: right;
+}
+.contenedor-mision{
+        inline-size: auto;
+        /*text-align: center;*/
+        overflow: hidden;
+}
+
+
+
+
+/*pie de la pagina*/
+
+footer{
+    color: white;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px 0;
+    /* height: 30%; */
+
+}
+
+#contactoFooter ul{
+    list-style-type: none;
+}
+
+#contactoFooter li{
+    float:right;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
+}
+
+#contactoFooter li a{
+    text-decoration:none;
+    color:white;
+}
+
+#contactoFooter li a:hover{
+    color:gray;
+}
+
+
+
+#direccion{
+
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
+>>>>>>> Stashed changes
 }
