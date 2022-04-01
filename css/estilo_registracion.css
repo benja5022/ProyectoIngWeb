@@ -42,8 +42,8 @@ padding: 10px;
 .contenedor{
     background: linear-gradient(165deg,#71b7e6,#9b59b6);
     text-align: center;
-    width: 1700px;
-    height: 800px;
+    width: 90%;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
@@ -69,19 +69,21 @@ transition: 2s;
 }
 
 .slide img{
-    width: 1800px;
+    width: 90%;
     height: 800px;
     margin-left: -400px;
 }
 
-/*menu navegacion*/
+
+/*el menu de navegacion*/
+
 .menu-navegacion{
 
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     position: absolute;
-     width: 1700px;
+    width: 85%;
      height: 50px;
      padding: 8px;
      display: flex;
@@ -128,7 +130,7 @@ nav ul,li a:hover::before{
 
 .navigation-manual{
 position: absolute;
-width: 1800px;
+width: 90%;
 margin-top: 700px;
 display: flex;
 justify-content: center;
@@ -165,7 +167,7 @@ transition: 1s;
 .navegation-auto{
     position: absolute;
     display: flex;
-    width: 1800px;
+    width: 90%;
     justify-content: center;
     margin-top: 700px;
 
@@ -193,7 +195,7 @@ background: #40D3DC;
 /*menu de registracion*/
 .contenedor-registracion{
     
-    width: 1680px;
+    width: 90%;
     height: 550px;
     border-radius: 20px;
     padding: 25px 30px;
@@ -205,13 +207,12 @@ background: #40D3DC;
 
 .registracion{
     max-width: 600px;
-    width: 100%;
+    width: 90%;
     height: 500px;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
     margin-left: 500px;
-
 }
 
 /*el titulo registrarse*/
@@ -333,14 +334,45 @@ form .boton input:hover{
 }
 
 /*pie de la pagina*/
-.contenedor-pie{
-    background: white;
+
+footer{
+    color: white;
+    background-color: rgb(30, 30, 30);
     text-align: center;
-    width: 1700px;
-    height: 400px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 5px 8px 12px black;
-    padding: 15px;
-    margin-left: 100px;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px 0;
+    /* height: 30%; */
+
+}
+
+#contactoFooter ul{
+    list-style-type: none;
+}
+
+#contactoFooter li{
+    float:right;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
+}
+
+#contactoFooter li a{
+    text-decoration:none;
+    color:white;
+}
+
+#contactoFooter li a:hover{
+    color:gray;
+}
+
+
+
+#direccion{
+
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
 }
