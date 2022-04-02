@@ -1,4 +1,3 @@
-
 body{
     margin: 0;
     padding: 0px;
@@ -46,8 +45,8 @@ padding: 10px;
 .contenedor{
     background: linear-gradient(165deg,#71b7e6,#9b59b6);
     text-align: center;
-    width: 1700px;
-    height: 800px;
+    width: 90%;
+    height: 100%;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 5px 8px 12px black;
@@ -73,18 +72,18 @@ transition: 2s;
 }
 
 .slide img{
-    width: 1800px;
+    width: 90%;
     height: 800px;
     margin-left: -400px;
 }
 
-/*menu navegacion*/
+/*el menu de navegacion*/
 .menu-navegacion{
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     position: absolute;
-     width: 1700px;
+     width: 85%;
      height: 50px;
      padding: 8px;
      display: flex;
@@ -121,6 +120,7 @@ nav ul,li a:hover::before{
 
 /*logo*/
 .logo-imagen{
+    width: 90%;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -131,7 +131,7 @@ nav ul,li a:hover::before{
 
 .navigation-manual{
 position: absolute;
-width: 1800px;
+width: 90%;
 margin-top: 700px;
 display: flex;
 justify-content: center;
@@ -168,7 +168,7 @@ transition: 1s;
 .navegation-auto{
     position: absolute;
     display: flex;
-    width: 1800px;
+    width: 90%;
     justify-content: center;
     margin-top: 700px;
 
@@ -195,20 +195,46 @@ background: #40D3DC;
 
 /*apartado de noticias*/
 .contenedor-noticias{
-    width: 1680px;
+    width: 90%;
     height: 550px;
     border-radius: 20px;
     padding: 25px 30px;
     background-color: white;
+    position: relative;
     box-shadow: 5px 8px 12px black;
     padding: 25 30px;
     margin-left: 100px;
 }
 
+
+.contenedor-noticias img{
+    clip-path: circle();
+    height: 20%;
+    width: 20%;
+}
+
+#noticia1{
+    float: left;
+}
+
+#noticia2{
+    float: left;
+}
+
+.Mas-noticias{
+    position: absolute;
+     width: 90%;
+     height: 1300px;
+     padding: 8px;
+     display: flex;
+     justify-content: right;
+
+}
+
 /*apartado de nuestra mision*/
 
 .contenedor-mision{
-    width: 1680px;
+    width: 90%;
     height: 150px;
     border-radius: 20px;
     padding: 25px 30px;
@@ -221,11 +247,8 @@ background: #40D3DC;
 }
 
 .seguir-leyendo{
-    /*border-radius: 20px;
-    overflow: hidden;*/
-    display: flex;
     position: absolute;
-     width: 1700px;
+     width: 90%;
      height: 1000px;
      padding: 8px;
      display: flex;
@@ -238,15 +261,48 @@ background: #40D3DC;
 }
 
 
-/*apartado footer*/
 
-.contenedor-pie{
-    width: 1680px;
-    height: 550px;
-    border-radius: 20px;
-    padding: 25px 30px;
-    background-color: white;
-    box-shadow: 5px 8px 12px black;
-    padding: 25 30px;
-    margin-left: 100px;
+
+/*pie de la pagina*/
+
+footer{
+    color: white;
+    background-color: rgb(30, 30, 30);
+    text-align: center;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1px 0;
+    /* height: 30%; */
+
+}
+
+#contactoFooter ul{
+    list-style-type: none;
+}
+
+#contactoFooter li{
+    float:right;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
+}
+
+#contactoFooter li a{
+    text-decoration:none;
+    color:white;
+}
+
+#contactoFooter li a:hover{
+    color:gray;
+}
+
+
+
+#direccion{
+
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 1px;
+    padding: 0 4px;
 }
