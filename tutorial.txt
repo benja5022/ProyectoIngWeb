@@ -1,6 +1,0 @@
-git status -> para saber en que rama se trabaja 
-git add . -> inicio para agregar archivos al github
-git commit -m "agregar comentario"-> agregar comentario a los cambios
-git config --global user.email "agregar email de tu github" -> agrega tu email
-git config --global user.email "agregar nombre" -> agregar nombre
-git push (direccion del git) (rama) -> agregar los cambios@ matias.osorio.q@mail.pucv.cl

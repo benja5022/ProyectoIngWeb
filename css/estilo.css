@@ -1,0 +1,56 @@
+.container-fluid {
+  background-color: #106BBF;
+}
+.container-fluid header {
+  margin: 0px 0px 0px;
+}
+.container-fluid .nav-link {
+  color: white;
+}
+.container-fluid .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.card.bg-success {
+  background-color: rgba(245, 245, 245, 0.75) !important;
+}
+
+.img-fluid {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #106BBF;
+}
+
+.btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.contenido {
+  background-color: #106BBF;
+}
+.contenido .redes-sociales {
+  color: white;
+}
+.contenido .letras {
+  color: white;
+}
+.contenido .letras .letra-negro {
+  color: black;
+}
+.contenido .letras .letra-negro .logo {
+  width: 50px;
+  height: 50px;
+}
+.contenido .copyright {
+  color: white;
+}
+
+.nav-item a:hover {
+  color: darkcyan;
+}
+
+/*# sourceMappingURL=estilo.css.map */

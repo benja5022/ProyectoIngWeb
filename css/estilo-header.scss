@@ -1,0 +1,55 @@
+$colorBase: #106BBF;
+$colorwhite: white;
+$colorblack: black;
+
+.container-fluid{
+    background-color: $colorBase;
+    // position: relative;
+
+    header{
+        margin: 0px 0px 0px;
+    }
+
+    .nav-link{
+        color: white;
+    }
+    
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+}
+
+.contenido{
+    background-color: $colorBase;
+    .redes-sociales{
+        color: $colorwhite;
+    }
+        .letras{
+            color: $colorwhite; 
+            .letra-negro{
+                color: $colorblack;
+                .logo{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+   .copyright{
+       color: $colorwhite;
+   }
+   
+}
+
+.img-fluid{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $colorBase;
+}
+
+.nav-item a:hover{
+  color: darkcyan;
+}

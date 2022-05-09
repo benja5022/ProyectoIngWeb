@@ -1,0 +1,106 @@
+.container-fluid {
+  background-color: rgb(41, 105, 224);
+}
+.container-fluid .logo {
+  width: 50px;
+  height: 50px;
+}
+.container-fluid .nav-link {
+  color: rgb(255, 255, 255);
+}
+
+body, html {
+  height: 100%;
+}
+
+.contenido {
+  background-color: rgb(41, 105, 224);
+}
+.contenido .redes-sociales {
+  color: white;
+}
+.contenido .letras {
+  color: white;
+}
+.contenido .letras .letra-negro {
+  color: black;
+}
+.contenido .letras .letra-negro .logo {
+  width: 15%;
+}
+.contenido .copyright {
+  color: white;
+}
+
+.img-fluid {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #106BBF;
+}
+
+body {
+  /*.precioder{
+      width: 120px;
+      padding: 7px;
+      margin-left: 800px;
+      background: #1f53c5;
+      color: white;
+  }*/
+}
+body .cabeza {
+  text-align: center;
+  color: black;
+  margin-left: 567px;
+  background-color: #1f53c5;
+  width: 150px;
+  padding: 14px;
+  font-size: large;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+body .elegir {
+  background-color: white;
+  width: 80%;
+  border-radius: 4px;
+  margin-left: 150px;
+  display: none;
+  margin-bottom: 500px;
+}
+body .elegir h2 {
+  text-align: center;
+}
+body .rndm {
+  background-color: red;
+  width: 150px;
+  padding: 14px;
+  margin-top: -350px;
+  margin-left: 200px;
+  display: none;
+}
+body .rndm p {
+  color: white;
+}
+body .banco {
+  width: 200px;
+  padding: 7px;
+  margin-bottom: 20px;
+  margin-left: 375px;
+}
+body .precio {
+  width: 120px;
+  padding: 7px;
+  margin-left: 550px;
+  margin-top: 20px;
+  background: #1f53c5;
+  color: white;
+  border-radius: 4px;
+}
+
+.nav-item a:hover {
+  color: darkcyan;
+}
+
+/*# sourceMappingURL=estilodonar.css.map */
