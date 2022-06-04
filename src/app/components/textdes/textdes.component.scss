@@ -1,0 +1,21 @@
+.scroll-text {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    color: black;
+    animation-name: desplazarTexto;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+  }
+  
+  
+  @keyframes desplazarTexto{
+    from{transform: translateY(-100%);}
+    to{  transform: translateY(100%);}
+  }
+  
+  ul li{
+    list-style-type: none;
+  }

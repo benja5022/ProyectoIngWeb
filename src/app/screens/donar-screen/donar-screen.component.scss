@@ -1,0 +1,82 @@
+$colorBase: #106BBF;
+
+.card{
+    background-color: rgba(39, 151, 179, 0.6)!important;
+}
+
+.card.lista{
+    overflow: hidden;
+}
+
+
+
+.img-fluid {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #106BBF;
+}
+
+
+    .cabeza{
+        text-align: center;
+        color: black;
+        margin-left: 567px;
+        background-color: #1f53c5;
+        width: 150px;
+        padding: 14px;
+        font-size: large;
+        color: white;
+        border-radius: 4px;
+        border: 1px solid white;
+    }
+    .elegir{
+        background-color: white;
+        width: 80%;
+        border-radius: 4px;
+        margin-left: 150px;
+        display: none;
+        margin-bottom: 500px;
+    }
+
+    .elegir h2{
+        text-align: center;
+    }
+
+    .rndm{
+        background-color: red;
+        width: 150px;
+        padding: 14px;
+        margin-top: -350px;
+        margin-left: 200px;
+        display: none;
+    }
+
+    .rndm p{
+        color: white;
+    }
+
+    .banco{
+        width: 200px;
+        //height: 20px;
+        padding: 7px;
+        margin-bottom: 20px;
+        margin-left: 375px;
+    }
+    .precio{
+        width: 120px;
+        padding: 7px;
+        margin-left: 550px;
+        margin-top: 20px;
+        background: #1f53c5;
+        color: white;
+        border-radius: 4px;
+    }
+
+
+.nav-item a:hover {
+    color: darkcyan;
+  }
+
+

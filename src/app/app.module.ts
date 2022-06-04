@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,9 @@ import { NuestrascampanasScreenComponent } from './screens/nuestrascampanas-scre
 import { SobrenosotrosScreenComponent } from './screens/sobrenosotros-screen/sobrenosotros-screen.component';
 import { TratadoscScreenComponent } from './screens/tratadosc-screen/tratadosc-screen.component';
 import { UneteScreenComponent } from './screens/unete-screen/unete-screen.component';
+import { TextdesComponent } from './components/textdes/textdes.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,11 +38,15 @@ import { UneteScreenComponent } from './screens/unete-screen/unete-screen.compon
     NuestrascampanasScreenComponent,
     SobrenosotrosScreenComponent,
     TratadoscScreenComponent,
-    UneteScreenComponent
+    UneteScreenComponent,
+    TextdesComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

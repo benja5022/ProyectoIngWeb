@@ -1,1 +1,63 @@
-<p>home-screen works!</p>
+ <!-- Background image -->
+ <div class=" img-fluid bg-image image p-5 mb-4text-white d-flex flex-column" style="  background-image:url('./../../../assets/images/tortuga-marina-plastico.jpg');height: 100%;">
+    <!--carrucel-->
+       <section class="carousel" style=" width: 50%; margin-left: 25%;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./../../../assets/images/animalPetro.jpg" class="d-block  w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./../../../assets/images/petroleo.jpg" class="d-block  w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!--final carrucel-->
+       <br>
+    <!--Noticias-->
+      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
+        <h1 class="card-title mb-0">Noticias</h1>
+        <img src="./../../../assets/images/animalPetro.jpg" class="bg-image w-25 h-100 float-start rounded-circle" style="margin-left: 15%; margin-top: -2%;"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">
+          Ejemplo de noticia numero 1
+        </p>
+      </div>
+      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
+        <img src="./../../../assets/images/petroleo.jpg" class="bg-image w-25 h-100 float-start rounded-circle" style="margin-left: 15%;margin-top: 0.5%;"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">
+          Ejemplo de noticia numero 2
+        </p>
+        <a a href="#" [routerLink]="['/noticias']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Mas noticias</a>
+      </div>
+      <br>
+      <!--sobre nosotros-->
+      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
+        <h1 class="card-title mb-0">Sobre nosotros</h1>
+        <p class="card-text text-center "style=" margin-top: 2%;">
+         Ejemplo de texto sobre nosotros
+        </p>
+        <a a href="#" [routerLink]="['/sobrenosotros']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
+      </div>
+      <br>
+     <!--Nuestra Mision-->
+     <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
+      <h1 class="card-title mb-0">Nuestras Campañas</h1>
+      <p class="card-text text-center "style=" margin-top: 2%;">
+        Descripción breve sobre nuestras campañas
+      </p>
+
+      <a a href="#" [routerLink]="['/nuestrascampanas']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
+    </div>
+    <!--final image-->
+    </div> 

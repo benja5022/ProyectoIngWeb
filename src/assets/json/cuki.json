@@ -1,0 +1,58 @@
+{
+    "persona":
+    [
+    {
+        "nombre":"Juanito gonzales",
+        "rut":"12.589.772-2",
+        "dinero":"$1.000.000"
+    },
+    {
+        "nombre":"Alberto perez",
+        "rut":"25.555.888-9",
+        "dinero":"$2.000.000"
+    },
+    {
+        "nombre":"Elvira jaja",
+        "rut":"9.268.312-k",
+        "dinero":"$3.000.000"
+    },
+    {
+        "nombre":"Anastacia hello",
+        "rut":"10.154.747-7",
+        "dinero":"$10.000.000"
+    },
+    {
+        "nombre":"Diego maradona",
+        "rut":"17.306.621-k",
+        "dinero":"$8.000.000"
+    },
+    {
+        "nombre":"Pedro Pascal",
+        "rut":"8.654.785-8",
+        "dinero":"$7.500.000"
+    },
+    {
+        "nombre":"Cesar pepegrillo",
+        "rut":"9.252.555-5",
+        "dinero":"$20.000.000"
+    }
+    ],
+
+    "personas":
+    [
+    
+     {
+       "id":1,
+       "nombre": "matias osorio",
+       "rut": "19.312.241-8",
+       "dinero":"100.000"
+     },
+     {
+      "id":2,
+      "nombre": "Ultraseven",
+      "rut": "20.005.221-k",
+      "dinero":"300.000"
+     }
+    ]
+
+}

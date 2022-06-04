@@ -1,0 +1,40 @@
+{
+    "lectores":
+    [
+    {
+        "nombre":"Juanito",
+        "apellido":"Messi",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Alberto",
+        "apellido":"Cano",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Elvira",
+        "apellido":"Romo",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Anastacia ",
+        "apellido":"Tabilo",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Diego",
+        "apellido":"Fuentes",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Pedro",
+        "apellido":"Huispe",
+        "correo": "messi@gmail.com"
+    },
+    {
+        "nombre":"Cesar",
+        "apellido":"Mackenzie",
+        "correo": "messi@gmail.com"
+    }
+    ]
+}

@@ -1,0 +1,27 @@
+<div class="card bg-success p-5 mb-4">
+    <div class="card-body">
+        <h4 class="card-title">Recibe nuestras novedades</h4>
+        <form>
+            <div class="mb-3">
+                <label for="InputName1" class="form-label">Nombre</label>
+                <input [(ngModel)]="name" name="valor1" type="name" class="form-control" id="InputName1" aria-describedby="emailHelp">
+                <!-- <p>COlo COLo {{name}</p> -->
+            </div>
+
+            <div class="mb-3">
+                <label for="InputLastName1" class="form-label">Apellido</label>
+                <input [(ngModel)]="lastName" name="valor2" type="name" class="form-control" id="InputLastName1" aria-describedby="emailHelp">
+             
+            </div>
+
+            <div class="mb-3">
+            <label for="InputEmail1" class="form-label">Dirección de correo electrónico</label>
+            <input [(ngModel)]="email" name="valor3" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con alguien más</div>
+            </div>
+
+            <button (click)="elementosSeleccionados(name,lastName,email)" id="boton" type="submit"  class="btn btn-primary">Recibir novedades</button>
+
+        </form>
+    </div>
+</div>

@@ -26,7 +26,7 @@ const routes: Routes = [
   {path: 'limpiaroceanosc', component:LimpiaroceanoscScreenComponent},
   {path:'economiac', component: EconomiacScreenComponent} ,
   {path:'desarrollosusc',component: DesarrollosuscScreenComponent},
-  {path: 'tratados', component: TratadoscScreenComponent}
+  {path: 'tratadosc', component: TratadoscScreenComponent}
 ];
 
 @NgModule({
