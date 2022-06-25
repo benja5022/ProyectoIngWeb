@@ -1,5 +1,9 @@
 $colorBase: #106BBF;
 
+.navbar{
+    background-color: #106BBF;
+}
+
 .container-fluid{
     background-color: $colorBase;
     // position: relative;
@@ -19,51 +23,8 @@ $colorBase: #106BBF;
 
 }
 
-.card.bg-success{
-    background-color: rgb(245,245,245,0.75) !important;
-}
-
-
-.img-fluid{
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $colorBase;
-}
-
-.btn{
-
-    a{
-        color: black;
-        text-decoration: none;
-    }
-}
-
-
-.contenido{
-    background-color: $colorBase;
-    .redes-sociales{
-        color: white;
-    }
-        .letras{
-            color: white; 
-            .letra-negro{
-                color: black;
-                .logo{
-                    width: 50px;
-                    height: 50px;
-                }
-            }
-        }
-   .copyright{
-       color: white;
-   }
-
-}
-
-.nav-item a:hover{
-    color:darkcyan;
+.navbar-nav a:hover{
+    color:darkcyan !important;
 }
 
 

@@ -1,19 +1,41 @@
-<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container-fluid">
+    <a href="#" [routerLink]="['/home']" > <img class="logo" src="./../../../assets/images/logo.png"> </a>
+    <a class="navbar-brand fs-4" href="#" [routerLink]="['/home']"><b>PROCEAN</b> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a href="#" [routerLink]="['/home']" class="nav-link">Inicio </a>
+        <a href="#" [routerLink]="['/nuestrascampanas']" class="nav-link">Nuestra campaña</a>
+        <a href="#" [routerLink]="['/sobrenosotros']" class="nav-link">Sobre nosotros</a>
+        <a href="#" [routerLink]="['/ayudaoceano']"class="nav-link">Ayuda al oceano</a>
+        <a href="#" [routerLink]="['/unete']"  class="nav-link">Recibe nuestras novedades</a>
+        <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a>
+        <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div class="container-fluid">
     <header class="d-flex flex-wrap justify-content-center py-3">
       <a href="#" [routerLink]="['/home']" > <img class="logo" src="./../../../assets/images/logo.png"> </a>
       <a href="#" [routerLink]="['/home']" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#"></use></svg> -->
+       
         <span class="fs-4"> <b>PROCEAN</b></span>
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" [routerLink]="['/home']" class="nav-link">Inicio </a></li>
-        <li class="nav-item"><a href="#" [routerLink]="['/nuestrascampanas']" class="nav-link">Nuestra campaña</a></li>
-        <li class="nav-item"><a href="#" [routerLink]="['/sobrenosotros']" class="nav-link">Sobre nosotros</a></li>
-        <li class="nav-item"><a href="#"  [routerLink]="['/ayudaoceano']"class="nav-link">Ayuda al oceano</a></li>
-        <li class="nav-item"><a href="#" [routerLink]="['/unete']"  class="nav-link">Recibe nuestras novedades</a></li>
-        <li class="nav-item"><a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a></li>
-        <li class="nav-item"><a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/home']" class="nav-link">Inicio </a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/nuestrascampanas']" class="nav-link">Nuestra campaña</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/sobrenosotros']" class="nav-link">Sobre nosotros</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/ayudaoceano']"class="nav-link">Ayuda al oceano</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/unete']"  class="nav-link">Recibe nuestras novedades</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a></li>
+        <li class="nav-item"> <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a></li>
       </ul>
     </header>
-  </div>
+  </div> -->
