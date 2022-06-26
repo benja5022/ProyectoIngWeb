@@ -1,0 +1,91 @@
+<div class=" img-fluid bg-image image p-5" style="  background-image:url('./../../../assets/images/medusa.jpg');height: 100%;">
+  <div class="row ">
+
+    <div class="col-8">
+      <div class="row">
+        <div class="card bg-success text-center border">
+          <div class=" card-body text-white ">
+            <h1 class="card-header mb-0 border">Donadores</h1>
+
+            <div class="list-group border">
+                <!--funcion de los donadores-->
+              <a herf="#"  class=" list-group-item list-group-item-action" aria-current="true" 
+                *ngFor="let donador of donaciones" 
+                (click)="Seleccionardonador(donador)" 
+                [ngClass]="{'active':SeleccionDonador === donador}" >
+                <!--donadores-->
+                <p class="card-info text-center text-black"> || Nombre: {{donador.nombre}} || Apellido: {{donador.apellido}} || Correo: {{donador.correo}} || Donacion: {{donador.monto} ||</p>
+
+                
+              
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h1 class="card-title text-white text-center">Lista mayores donadores</h1>
+        <div class="card lista bg-success border">
+          
+          <app-textdes></app-textdes>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4" >
+          <!--configuracion de botones y agregar datos-->
+        <div class="card bg-sucess">
+          
+          <div class="card-body border text-white text-center">
+
+            <form [formGroup]="formulario" (ngSubmit)="onSubmit(buttonType)" >
+              <ul>
+                <li><input formControlName="nombre" form="text" placeholder="Nombre"> </li>
+                <li><input formControlName="apellido" type="text" placeholder="Apellido"> </li>
+                <li><input formControlName="correo" type="text" placeholder="Correo"> </li>
+                <li><input formControlName="monto" type="text" placeholder="Monto"> </li>
+              </ul>
+              <button type="submit" (click)="onSubmit('submit')" class="btn btn-success">Agregar</button>
+              <button type="submit" (click)="onSubmit('update')" class="btn btn-warning">Actualizar</button>
+              <button type="submit" (click)="onSubmit('delete')" class="btn btn-danger">Eliminar</button>
+
+            </form>
+            
+            <!-- <h1 class="card-header border">Tu Donación</h1> -->
+              <!--rellenar datos-->
+              <!--nombre-->
+
+              <!-- <h2 class="card-title mb-0">Nombre donador</h2> -->
+              <!-- <input [(ngModel)]="nombre" class = "my-2" type = "text"> -->
+
+              <!--apellido-->
+
+              <!-- <h2 class="card-title mb-0">Apellido</h2> -->
+              <!-- <input [(ngModel)]="apellido" class = "my-2" type = "text"> -->
+
+              <!--correo-->
+
+              <!-- <h2 class="card-title mb-0">Correo</h2> -->
+              <!-- <input [(ngModel)]="correo" class = "my-3" type = "text"> -->
+
+              <!--monto-->
+
+              <!-- <h2 class="card-title mb-0">Cantidad a donar</h2> -->
+              <!-- <input [(ngModel)]="monto" class = "my-3" type = "text"> -->
+
+            <!--botones de agregar, modificar y eliminar-->
+              <!-- <div class = "card-body border d-grid gap-2"> -->
+                <!-- <a (click)="AgregarDonador(nombre,apellido,correo,monto)"  class="btn btn-success">Donar</a> -->
+                <!-- <a (click)="Modificardonador(nombre,apellido,correo,monto,SeleccionDonador)" class="btn btn-warning">Cambiar/modificar donación</a> -->
+                <!-- <a (click)="EliminarDonador()" class="btn btn-danger">Eliminar donación</a> -->
+              <!-- </div> -->
+
+          <!-- </div> -->
+        </div>
+    </div>
+
+
+  </div>
+</div>
