@@ -110,6 +110,18 @@ aplicacion.get('/unete/:correo',bodyParser.json() ,(req:any,res:any)=> {
 });
 
 
+aplicacion.post('/unete',bodyParser.json() ,(req:any,res:any)=> {
+    let nombre=req.body.nombre;
+    let apellido=req.body.apellido;
+    let email=req.body.correo;
+    let contrasenia=req.body.contrasenia;
+    console.log(nombre+" "+apellido+" "+email+" "+contrasenia)
+    connection.query("INSERT INTO `usuarios` (nombre,apellido,correo,contrasenia) values (?,?,?,md5(?))",[nombre,apellido,email,contrasenia],(req1:any,res1:any)=>{
+        res.status(200).send(res1);
+    });
+});
+
+
 // OTROS
 // 
 // 

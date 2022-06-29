@@ -2,62 +2,40 @@
     <div class="card-body">
         <h4 class="card-title">Recibe nuestras novedades</h4>
         <form [formGroup]="form" (ngSubmit)="submit()">
-            <ul>
-                <li>
-                    <input formControlName="name" type="text" placeholder="Nombre"  class="form-control">     
-                </li>
-
-                <li>
-                    <input formControlName="surname" type="text" placeholder="Apellido" class="form-control">    
-                </li>
-
-                <li>
-                    <input formControlName="email" type="text" placeholder="Correo" class="form-control">     
-                </li>
-
-                <li>
-                    <input formControlName="contrasenia" type="password" placeholder="Contraseña" class="form-control">  
-                </li>
 
 
-                <li>
-                    <button id="boton" type="submit"  class="btn btn-primary">Recibir novedades</button>
-                </li>
-
-            </ul>
-
-            <!-- <div class="mb-3"> -->
-                <!-- <label for="InputName" class="form-label">Nombre</label> -->
-                <!-- <input formControlName="name" type="text" placeholder="Nombre"  class="form-control"> -->
+            <div class="mb-3">
+                <label for="InputName" class="form-label">Nombre</label>
+                <input formControlName="name" type="text" placeholder="Nombre"  class="form-control">
 
                 <!-- <input [(ngModel)]="name" name="valor1" type="name" class="form-control" id="InputName1" aria-describedby="emailHelp"> -->
                 <!-- <p>COlo COLo {{name}</p> -->
-            <!-- </div> -->
+            </div>
 
-            <!-- <div class="mb-3"> -->
-                <!-- <label for="InputLastName" class="form-label">Apellido</label> -->
-                <!-- <input formControlName="surname" type="text" placeholder="Apellido" class="form-control"> -->
+            <div class="mb-3">
+                <label for="InputLastName" class="form-label">Apellido</label>
+                <input formControlName="surname" type="text" placeholder="Apellido" class="form-control">
 
                 <!-- <input [(ngModel)]="lastName" name="valor2" type="name" class="form-control" id="InputLastName1" aria-describedby="emailHelp"> -->
              
-            <!-- </div> -->
+            </div>
 
-            <!-- <div class="mb-3"> -->
-                <!-- <label for="InputEmail" class="form-label">Dirección de correo electrónico</label> -->
-                <!-- <input formControlName="email" type="text" placeholder="Correo" class="form-control"> -->
-
-                <!-- <input [(ngModel)]="email" name="valor3" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"> -->
-            <!-- </div> -->
-
-            <!-- <div class="mb-3"> -->
-                <!-- <label for="InputEmail" class="form-label">Contraseña</label> -->
-                <!-- <input formControlName="contrasenia" type="password" placeholder="Contraseña" class="form-control"> -->
-                <!-- <div id="emailHelp" class="form-text">Nunca compartiremos sus datos con alguien más</div> -->
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">Dirección de correo electrónico</label>
+                <input formControlName="email" type="text" placeholder="Correo" class="form-control">
 
                 <!-- <input [(ngModel)]="email" name="valor3" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"> -->
-            <!-- </div> -->
+            </div>
 
-            <!-- <button id="boton" type="submit"  class="btn btn-primary">Recibir novedades</button> -->
+            <div class="mb-3">
+                <label for="InputEmail" class="form-label">Contraseña</label>
+                <input formControlName="pass" type="password" placeholder="Contraseña" class="form-control">
+                <div id="emailHelp" class="form-text">Nunca compartiremos sus datos con alguien más</div>
+
+                <!-- <input [(ngModel)]="email" name="valor3" type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"> -->
+            </div>
+
+            <button id="boton" type="submit"  class="btn btn-primary">Recibir novedades</button>
 
         </form>
     </div>

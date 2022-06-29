@@ -38,6 +38,10 @@ export class ServiceClienteService {
     return this.servicio.get( `${this.servidor}/unete/${correo}`, HttpOption);
   }
 
+  agregarNuevoUsuario(usuario:Usuarios):Observable<any>{
+    return this.servicio.post( `${this.servidor}/unete`,JSON.stringify(usuario), HttpOption );
+  }
+
 
 
 }

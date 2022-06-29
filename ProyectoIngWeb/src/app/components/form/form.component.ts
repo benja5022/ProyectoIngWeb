@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
     name:"",
     surname: "",
     email: "",
-    contrasenia:"",
+    pass:"",
     tipo:""
   });
 
@@ -62,23 +62,38 @@ export class FormComponent implements OnInit {
 
     };
 
-    let variable = this.form.get("email")?.value
+    let nombreCorreo = this.form.get("email")?.value
     // console.log(valor.correo)
-
-    this.servicioCliente.revisarUsuario(variable).subscribe(
+    let bandera = false
+    this.servicioCliente.revisarUsuario(nombreCorreo).subscribe(
       datos=> {
-        console.log(datos);
-        // for(let i = 0; i< datos.length ; i++){
-          // if(datos.correo == valor.correo){
-          //   console.log("El Usuario ya existe")
-          //   usuario = datos[i]
-          // }
-          // this.usuarios.push(datos[i]);
-        // }
-        // console.log(datos);
+        if(datos != null){
+          if(datos[0] == nombreCorreo){
+            bandera = true
+            console.log("El usuario ya existe");
+          }
+          else{
+            this.agregarUsuario();
+          }
+        }
       });
 
     console.log(usuario.correo)
+
+  }
+
+  public agregarUsuario(){
+
+    this.servicioCliente.agregarNuevoUsuario({
+      id:0,
+      nombre:this.form.get("name")?.value,
+      apellido:this.form.get("surname")?.value,
+      correo:this.form.get("email")?.value,
+      contrasenia:this.form.get("pass")?.value,
+      tipo:1
+    }).subscribe( data=>{
+        console.log("agregando usuario");
+    });
 
   }
 }
