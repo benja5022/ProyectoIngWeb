@@ -1,4 +1,6 @@
-import { Component,  OnInit} from '@angular/core';
+import { Component,  OnInit, ViewChild} from '@angular/core';
+import { FormComponent} from './../../components/form/form.component'
+
 
 @Component({
   selector: 'app-unete-screen',
@@ -7,11 +9,12 @@ import { Component,  OnInit} from '@angular/core';
 })
 export class UneteScreenComponent implements OnInit {
 
-  constructor() {
+  constructor(){//private servicioCliente:ServiceClienteService, public formu:FormBuilder, private httpClient:HttpClient) {
 
   }
 
   ngOnInit(): void {
+
 
   }
 

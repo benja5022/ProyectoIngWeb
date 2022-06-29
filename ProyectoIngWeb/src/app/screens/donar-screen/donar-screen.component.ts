@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { donadores2 } from 'src/app/models/donadores.model';
 import listaDePersonas from 'src/assets/json/cuki.json' ;
 import  { ServiceClienteService } from './../../servicios/service-cliente.service' ;
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Donaciones} from './../../interfaces/donaciones';
 import { FormBuilder,FormGroup } from '@angular/forms';
 
@@ -26,7 +26,13 @@ export class DonarScreenComponent implements OnInit {
     correo: "",
     monto: 0.0 
   });
-  public SeleccionDonador: any;
+  public SeleccionDonador: Donaciones={
+    id:0,
+    nombre:"",
+    apellido: "",
+    correo: "",
+    monto: 0
+  };
 
   public nombre: string = '';
   public apellido: string = '';
@@ -39,7 +45,7 @@ export class DonarScreenComponent implements OnInit {
 
 
   //datos usando js 
-  constructor(private servicioCliente:ServiceClienteService, public formu:FormBuilder) {
+  constructor(private servicioCliente:ServiceClienteService, public formu:FormBuilder, private httpClient:HttpClient) {
     // this.formulario 
 
   //    this.donadores = []
@@ -53,7 +59,7 @@ export class DonarScreenComponent implements OnInit {
   ngOnInit(): void {
 
 
-    this.servicioCliente.consultarUsuarios().subscribe(
+    this.servicioCliente.consultarDonador().subscribe(
       datos=> {
         for(let i = 0; i< datos.length; i++){
           this.donaciones.push(datos[i]);
@@ -101,12 +107,16 @@ export class DonarScreenComponent implements OnInit {
     }
 
     if(boton == "delete"){
-      console.log("Hola 3");
+      this.EliminarDonador();
     }
     
   }
 
   public EliminarDonador(){
+
+    this.servicioCliente.eliminarDonador(this.SeleccionDonador.id).subscribe(data =>{
+      console.log("Respuesta eliminar: " + data);
+    });
 
     // for(let i = 0; i< this.donadores.length;i++){
     //   if(this.donadores[i].id == this.SeleccionDonador.id){
@@ -117,17 +127,45 @@ export class DonarScreenComponent implements OnInit {
  }
  public Modificardonador(){
 
-  this.servicioCliente.actualizarDonador({
-    id:this.SeleccionDonador.id,
-    nombre:this.formulario.get("nombre")?.value,
-    apellido: this.formulario.get("apellido")?.value,
-    correo: this.formulario.get("correo")?.value,
-    monto: parseFloat(this.formulario.get("monto")?.value)  
-  }).subscribe(respuesta=>{
-    console.log(respuesta);
-  });
 
-  location.reload();
+    // let endPoint = "/donar/";
+
+    this.servicioCliente.actualizarDonador(this.SeleccionDonador.id ,{
+      id:0,
+      nombre:this.formulario.get("nombre")?.value,
+      apellido: this.formulario.get("apellido")?.value,
+      correo: this.formulario.get("correo")?.value,
+      monto: parseFloat(this.formulario.get("monto")?.value)  
+    }).subscribe(data =>{
+      console.log("Respuesta put: " + data);
+    });
+
+    // this.httpClient.put("http://127.0.0.1:3002" + endPoint +this.SeleccionDonador.id,{
+    //   id:null,
+    //   nombre:this.formulario.get("nombre")?.value,
+    //   apellido: this.formulario.get("apellido")?.value,
+    //   correo: this.formulario.get("correo")?.value,
+    //   monto: parseFloat(this.formulario.get("monto")?.value)  
+    // } ).subscribe(data =>{
+    //   console.log("Colo COlo, Colo Colo" + data)
+    // });
+
+
+
+
+
+  // this.servicioCliente.actualizarDonador(
+  //   {
+  //   id:this.SeleccionDonador.id,
+  //   nombre:this.formulario.get("nombre")?.value,
+  //   apellido: this.formulario.get("apellido")?.value,
+  //   correo: this.formulario.get("correo")?.value,
+  //   monto: parseFloat(this.formulario.get("monto")?.value)  
+  // }).subscribe(respuesta=>{
+  //   console.log(respuesta);
+  // });
+
+  // location.reload();
 
   // for(let i = 0; i< this.donadores.length;i++){
   //   if(this.donadores[i].id == this.SeleccionDonador.id){

@@ -37,32 +37,99 @@ connection.connect(function(error:any, results:any, fields:any){
     // si error es true, falló la conexión con la base de datos.
     if(error){ 
         console.log("falla");
-        throw error;
-        
-    }
+        throw error;}
 
     console.log("todo Bien");
-    
 });
-
 aplicacion.use(cors());
 aplicacion.use(bodyParser.urlencoded({extended: false}));
 
 //metodos CRUD , Create==post, READ=GET, UPDATE=PU, DELETE=DELETE
 
-// uno de los metodos de una api rest, get
-// req-> peticion y res -> respuesta
-aplicacion.get('/', (req:any, res:any) => {
-  res.send('Hola mundo2!');
-});
-
 aplicacion.get('/donar', (req:any, res:any) => {
     // query -> es un metodo para acceder a las consultas de la base de datos
     connection.query("SELECT * FROM donaciones", (requirement:any,response:any)=>
     {
-        console.log(response);
+        // console.log(response);
         //res.send(response);
         res.status(200).send(response);
+    });
+});
+
+
+// CRUD de DONAR
+
+aplicacion.post('/donar',bodyParser.json() ,(req:any, res:any) => {
+    // nombre,correo,donacion,apellido es el id del formulario (campo) "formControlName='nombre'"
+        let nombre= req.body.nombre;
+        let correo = req.body.correo;
+        let apellido = req.body.apellido;
+        let monto = req.body.monto;
+
+        console.log("Correcto: "+nombre +" " +correo);
+
+        connection.query("INSERT INTO `donaciones` (nombre,apellido,correo,monto) VALUES ('"+nombre+"','"+apellido+"','"+correo+"','"+monto+"')" ,(req1:any,res1:any)=>{
+            //res.status(201).send("Donante Creado");
+            res.send(JSON.stringify(`formulario creado ${res1.insertId})`));
+            // console.log(res1);
+    });
+
+});
+
+aplicacion.put('/donar/:id',bodyParser.json() ,(req:any, res:any) => {
+    let id=req.params.id;
+    let nombre= req.body.nombre;
+    let correo = req.body.correo;
+    let apellido = req.body.apellido;
+    let monto = req.body.monto;
+
+    console.log("`nombre` ='"+nombre+"',`apellido`='"+apellido+"',`correo`='"+correo+"',`monto`="+monto);
+
+    connection.query("UPDATE `donaciones` SET `nombre` ='"+nombre+"', `apellido`='"+apellido+"',`correo`='"+correo+"',`monto`="+monto+" WHERE id="+id+"",(req1:any,res1:any)=>{
+        console.log("colo Colo");
+        res.status(200).send("Usuario Actualizado");
+    });
+
+});
+
+aplicacion.delete('/donar/:id',bodyParser.json() ,(req:any,res:any)=> {
+    let id=req.params.id
+    connection.query("DELETE FROM `donaciones` WHERE id=?",id,(req1:any,res1:any)=>{
+        res.status(200).send("Usuario Eliminado");
+    });
+});
+
+
+// CRUD de USUARIOS
+
+aplicacion.get('/unete/:correo',bodyParser.json() ,(req:any,res:any)=> {
+    let email=req.params.correo;
+    connection.query("SELECT `correo` FROM `usuarios` WHERE `correo` = ?",email,(req1:any,res1:any)=>{
+        res.status(200).send(res1);
+    });
+});
+
+
+// OTROS
+// 
+// 
+// 
+// 
+// 
+aplicacion.delete('/eliminarUsuario', (req:any,res:any)=> {
+    let id = req.body.id;
+    connection.query("DELETE FROM `usuarios` WHERE id=?",id,(req1:any,res1:any)=>{
+        res.status(200).send("Usuario Eliminado");
+    });
+});
+
+// 2da forma
+aplicacion.put('/modificarUsuarios2',(req:any, res:any) => {
+
+    let id = req.body.id;
+    let nombre=req.body.nombre;
+    connection.query("UPDATE `usuarios` SET nombre=? WHERE id=?",[nombre,id],(req1:any,res1:any)=>{
+        res.status(200).send("Usuario Actualizado");
     });
 });
 
@@ -78,60 +145,17 @@ aplicacion.get('/usuarios/:id',bodyParser.json(), (req:any, res:any) => {
     });
 });
 
-// inserción de datos
-// los parametros vienen a través de un formulario en los corchetes ("[]")
-// no se utiliza req.params porque los datos on se encuentran en la url, está dentro del body
-aplicacion.post('/donar',bodyParser.json() ,(req:any, res:any) => {
-    // nombre,correo,donacion,apellido es el id del formulario (campo) "formControlName='nombre'"
-        let nombre= req.body.nombre;
-        let correo = req.body.correo;
-        let apellido = req.body.apellido;
-        let monto = req.body.monto;
-
-        console.log("Correcto: "+nombre +" " +correo);
-
-        connection.query("INSERT INTO `donaciones` (nombre,apellido,correo,monto) VALUES ('"+nombre+"','"+apellido+"','"+correo+"','"+monto+"')" ,(req1:any,res1:any)=>{
-            //res.status(201).send("Donante Creado");
-            res.send(JSON.stringify(`formulario creado ${res1.insertId})`));
-            console.log(res1);
-    });
-
+aplicacion.get('/', (req:any, res:any) => {
+  res.send('Hola mundo2!');
 });
 
-// editar actualizar
-aplicacion.put('/donar',bodyParser.json() ,(req:any, res:any) => {
-    let id= req.body.id;
-    let nombre= req.body.nombre;
-    let correo = req.body.correo;
-    let apellido = req.body.apellido;
-    let monto = req.body.monto;
-
-    console.log(id + " "+nombre+ " "+correo+ " "+apellido+" "+monto);
-
-    // connection.query("UPDATE `usuarios` SET nombre=?, apellido=?, correo=?, monto=? WHERE id=?",[nombre,apellido, correo,monto,id],(req1:any,res1:any)=>{
-    //         res.status(200).send("Usuario Actualizado");
-    // });
-
-});
-
-// 2da forma
-aplicacion.put('/modificarUsuarios2',(req:any, res:any) => {
-
-    let id = req.body.id;
-    let nombre=req.body.nombre;
-    connection.query("UPDATE `usuarios` SET nombre=? WHERE id=?",[nombre,id],(req1:any,res1:any)=>{
-        res.status(200).send("Usuario Actualizado");
-    });
-});
-
-aplicacion.delete('/eliminarUsuario', (req:any,res:any)=> {
-    let id = req.body.id;
-    connection.query("DELETE FROM `usuarios` WHERE id=?",id,(req1:any,res1:any)=>{
-        res.status(200).send("Usuario Eliminado");
-    });
-});
-
-
+// aplicacion.get('/donar/:id', (req:any, res:any) => {
+//     let id=req.params.id
+//     connection.query("SELECT * FROM donaciones WHERE id=?",id, (requirement:any,response:any)=>
+//     {
+//         res.status(200).send(response);
+//     });
+// });
 
 aplicacion.listen(puerto,()=>{
     console.log(`Colo Colo lo más grande servidor escuchando localhost:${puerto}`);

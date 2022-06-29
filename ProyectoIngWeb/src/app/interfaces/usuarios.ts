@@ -1,4 +1,3 @@
-import internal from "stream";
 
 export interface Usuarios {
     id:number;
@@ -6,5 +5,6 @@ export interface Usuarios {
     apellido:string;
     correo:string;
     contrasenia:string;
+    tipo:number;
 
 }

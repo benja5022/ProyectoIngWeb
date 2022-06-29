@@ -54,7 +54,7 @@ export class TextdesComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.servicioCliente.consultarUsuarios().subscribe(
+    this.servicioCliente.consultarDonador().subscribe(
       datos=> {
         for(let i = 0; i< datos.length; i++){
           if(datos[i].monto > 1000 ){

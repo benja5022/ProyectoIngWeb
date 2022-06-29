@@ -14,7 +14,7 @@
                 (click)="Seleccionardonador(donador)" 
                 [ngClass]="{'active':SeleccionDonador === donador}" >
                 <!--donadores-->
-                <p class="card-info text-center text-black"> || Nombre: {{donador.nombre}} || Apellido: {{donador.apellido}} || Correo: {{donador.correo}} || Donacion: {{donador.monto} ||</p>
+                <p class="card-info text-center text-black"> || Nombre: {{donador.nombre}} || Apellido: {{donador.apellido}} || Correo: {{donador.correo}} || Donacion: {{donador.monto}} ||</p>
 
                 
               
@@ -41,15 +41,39 @@
           <div class="card-body border text-white text-center">
 
             <form [formGroup]="formulario" (ngSubmit)="onSubmit(buttonType)" >
+              <h1 class="card-header border">Tu Donación</h1>
+              
               <ul>
-                <li><input formControlName="nombre" form="text" placeholder="Nombre"> </li>
-                <li><input formControlName="apellido" type="text" placeholder="Apellido"> </li>
-                <li><input formControlName="correo" type="text" placeholder="Correo"> </li>
-                <li><input formControlName="monto" type="text" placeholder="Monto"> </li>
+                <li>
+                  <h2 class="card-title mb-0">Nombre</h2>
+                  <input formControlName="nombre" form="text" placeholder="Nombre"  class="form-control">
+                </li>
+                
+                  <li>
+                    <h2 class="card-title mb-0">Apellido</h2>
+                    <input formControlName="apellido" type="text" placeholder="Apellido" class="form-control">
+                  </li>
+                
+                  <li>
+                    <h2 class="card-title mb-0">Correo</h2>
+                    <input formControlName="correo" type="text" placeholder="Correo" class="form-control">
+                  </li>
+
+                  <li>
+                    <h2 class="card-title mb-0">Monto</h2>
+                    <input formControlName="monto" type="text" placeholder="Monto" class="form-control">
+                  </li>
+              
               </ul>
-              <button type="submit" (click)="onSubmit('submit')" class="btn btn-success">Agregar</button>
-              <button type="submit" (click)="onSubmit('update')" class="btn btn-warning">Actualizar</button>
-              <button type="submit" (click)="onSubmit('delete')" class="btn btn-danger">Eliminar</button>
+
+              <ul>
+                <li><button type="submit" (click)="onSubmit('submit')" class="btn btn-success form-control mb-1">Agregar</button></li>
+                <li><button type="submit" (click)="onSubmit('update')" class="btn btn-warning form-control mb-1">Actualizar</button></li>
+                <li><button type="submit" (click)="onSubmit('delete')" class="btn btn-danger form-control mb-1">Eliminar</button></li>
+              </ul>
+              
+              
+              
 
             </form>
             
