@@ -22,6 +22,7 @@ import { TextdesComponent } from './components/textdes/textdes.component';
 import { FormComponent } from './components/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SesionScreenComponent } from './screens/sesion-screen/sesion-screen.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TratadoscScreenComponent,
     UneteScreenComponent,
     TextdesComponent,
-    FormComponent
+    FormComponent,
+    SesionScreenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,101 @@
+$colorBase: #106BBF;
+
+    .card-body{
+    background-color: rgba(39, 151, 179, 0.6)!important;
+    }
+
+    .card.lista{
+    overflow: hidden;
+    }
+
+
+
+    .img-fluid {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #106BBF;
+    }
+
+
+    .cabeza{
+        text-align: center;
+        color: black;
+        margin-left: 567px;
+        background-color: #1f53c5;
+        width: 150px;
+        padding: 14px;
+        font-size: large;
+        color: white;
+        border-radius: 4px;
+        border: 1px solid white;
+    }
+    .elegir{
+        background-color: white;
+        width: 80%;
+        border-radius: 4px;
+        margin-left: 150px;
+        display: none;
+        margin-bottom: 500px;
+    }
+
+    .elegir h2{
+        text-align: center;
+    }
+
+    .rndm{
+        background-color: red;
+        width: 150px;
+        padding: 14px;
+        margin-top: -350px;
+        margin-left: 200px;
+        display: none;
+    }
+
+    .rndm p{
+        color: white;
+    }
+
+    .banco{
+        width: 200px;
+        //height: 20px;
+        padding: 7px;
+        margin-bottom: 20px;
+        margin-left: 375px;
+    }
+    .precio{
+        width: 120px;
+        padding: 7px;
+        margin-left: 550px;
+        margin-top: 20px;
+        background: #1f53c5;
+        color: white;
+        border-radius: 4px;
+    }
+
+
+
+  .gradient-custom-2 {
+    // fallback for old browsers 
+    background: #90e3fc;
+
+    // Chrome 10-25, Safari 5.1-6 
+    background: -webkit-linear-gradient(to right, #4bb5f6, #3080f1, #236add,#4415dd);
+
+    // W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background: linear-gradient(to right, #24a4ee, #366fd8, #3936dd, #6345b4);
+  }
+/*
+  @media (min-width: 768px) {
+    .gradient-form {
+      height: 100vh !important;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+      border-top-right-radius: .3rem;
+      border-bottom-right-radius: .3rem;
+    }
+  }*/

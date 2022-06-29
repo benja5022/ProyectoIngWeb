@@ -89,6 +89,19 @@ aplicacion.post('/unete', bodyParser.json(), (req, res) => {
         res.status(200).send(res1);
     });
 });
+// Inicio de sesion Mati
+aplicacion.get('/login', (req, res) => {
+    const usuario = req.query.usuario;
+    const contrasenia = req.query.contrasenia;
+    connection.query("select id,correo from usuarios where correo=? and contrasenia=md5(?)", [usuario, contrasenia], function (error, resultados, fields) {
+        if (error) {
+            throw (error);
+        }
+        else {
+            res.send(resultados);
+        }
+    });
+});
 // OTROS
 // 
 // 

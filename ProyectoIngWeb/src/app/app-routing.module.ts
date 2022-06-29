@@ -12,6 +12,7 @@ import { NuestrascampanasScreenComponent } from './screens/nuestrascampanas-scre
 import { SobrenosotrosScreenComponent } from './screens/sobrenosotros-screen/sobrenosotros-screen.component';
 import { TratadoscScreenComponent } from './screens/tratadosc-screen/tratadosc-screen.component';
 import { UneteScreenComponent } from './screens/unete-screen/unete-screen.component';
+import { SesionScreenComponent } from './screens/sesion-screen/sesion-screen.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch:'full'},
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'limpiaroceanosc', component:LimpiaroceanoscScreenComponent},
   {path: 'economiac', component: EconomiacScreenComponent} ,
   {path: 'desarrollosusc',component: DesarrollosuscScreenComponent},
-  {path: 'tratadosc', component: TratadoscScreenComponent}
+  {path: 'tratadosc', component: TratadoscScreenComponent},
+  {path: 'inicioSesion', component: SesionScreenComponent}
 ];
 
 @NgModule({

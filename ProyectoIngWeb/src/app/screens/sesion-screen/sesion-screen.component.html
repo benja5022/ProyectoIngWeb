@@ -1,0 +1,63 @@
+<div class=" img-fluid bg-image justify-content-center text-white image p-5 mb-4text-white d-flex flex-column" style="  background-image:url('./../../../assets/images/tortuga-marina-plastico.jpg');height: 100%;">
+    <div class="row g-0">
+        <div class="col-lg-6">
+            <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                    <img src="./../../../assets/images/logo.png" style="width: 185px;" alt="logo">
+                    <h1 class="mt-1 mb-5 pb-1">Nosotros somos procean</h1>
+                </div>
+              
+                <h2>Inicia sesión</h2>
+                <!--inicio sesion-->
+                <form [formGroup]="formGroup" (ngSubmit)="validarlogin()">    
+
+                <div class="form-outline mb-4">
+                    <label class="form-label"  style="margin-left: 0px;">Usuario</label>    
+                    <input type="email" class="form-control"  placeholder="usuario" formControlName="usuario">
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 67.2px;"></div>
+                            <div class="form-notch-trailing"></div>
+                    </div>
+                </div>
+                     
+                <div class="form-outline mb-4">
+                    <label class="form-label"  style="margin-left: 0px;">Contraseña</label>
+                    <input type="password" class="fadeIn third form-control" placeholder="contrasenia" formControlName="contrasenia">
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 64px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                </div>     
+
+                <div class="text-center pt-1 mb-5 pb-1">
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" [disabled]="formGroup.invalid" value= "log in" type="button iniciarsesion">Iniciar Sesión</button>
+                    <!--<a class="text-white" href="#!">Olvidaste la contraseña?</a>-->
+                </div>
+            </form>
+            {{mensaje}}
+                <!--Fin inicio sesion-->
+
+                <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">No tienes cuenta?</p>
+                    <button type="button" [routerLink]="['/unete']" class="btn btn-outline-info">Crear cuenta</button>
+                </div>
+ 
+
+            </div>
+
+        </div>
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <h1 class="mb-4">Somos amigos del oceano</h1>
+                    <p class="small mb-0">jajjajanvcajnjanhdkajhfjfhkajhfkjahfkjahfdkjahfakjfhksajhfakjhfskjhfa
+                     asjdfnhkajshdjhdkjahdkjshdkjahdkjshdkjahdkjhakdjhakjshdkjahsdkjhdsakjhdskjhdakjshdkjahdskj   
+                     sadasdadadsdadasda.
+                    </p>
+                    <p></p>
+                    <h2>Inicia sesion para poder acceder:</h2>
+                    <p class="mb-0">- Noticias</p>
+                    <p calss="mb-0">- donar</p>
+                 </div>
+                </div>
+    </div>
+</div>
