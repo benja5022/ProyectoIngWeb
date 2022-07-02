@@ -3,6 +3,7 @@
 // con la libreria mysql se conecta a la base de datos 
 // cuando se trabaja con angular se instala "npm i --save-dev @types/node" automaticamente
 // instalar express, mysql
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
 const mysql = require('mysql');
 const pg = require('pg');
@@ -13,12 +14,17 @@ const bodyParser = require('body-parser');
 const aplicacion = express();
 // const servidor="127.0.0.1";
 const puerto = 3002;
+//const usuario = "prueba1";
+//inicio seguro que genera un token cifrado de texto plano donde se guarda la clave
+//const jwt = require("jsonwebtoken");
+//codigo o clave donde se guarda
+//const token = require("./config");
 // configuración de la conexion
 let connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
+    host: 'localhost',
+    user: 'benja',
     port: 3306,
-    password: '',
+    password: '123',
     database: 'procean'
 });
 connection.connect(function (error, results, fields) {
@@ -90,6 +96,33 @@ aplicacion.post('/unete', bodyParser.json(), (req, res) => {
     });
 });
 // Inicio de sesion Mati
+//crear una ruta segura
+/*const Modoseguro = express.Router();
+Modoseguro.use((req:any,res:any,next:any)=>{
+   
+    const token = req.headers["access-token"];
+    console.log(token);
+
+    jwt.verify(token, token.token, (err:any,decoded:any)=>{
+        if(err){
+            return res.json("token invalido");
+        }else{
+            req.decoded = decoded;
+            req.authenticated = true;
+            next();
+        }
+    })
+})*/
+//la llave
+/*aplicacion.get('/token',(req:any,res:any)=>{
+    jwt.sign(
+        {exp: Math.floor(Date.now() / 1000) + (60 * 60),
+        data: 'bar'}, token.token,function(error:any,token:any){
+        console.log(token);
+        res.json(token);
+    });
+});*/
+//inicio sesion seguro
 aplicacion.get('/login', (req, res) => {
     const usuario = req.query.usuario;
     const contrasenia = req.query.contrasenia;
@@ -101,6 +134,15 @@ aplicacion.get('/login', (req, res) => {
             res.send(resultados);
         }
     });
+    /*const usuario= req.query.usuario;
+    const contrasenia = req.query.contrasenia;
+    connection.query("select id,correo from usuarios where correo=? and contrasenia=md5(?)",[usuario,contrasenia],function(error:any,resultados:any,fields:any){
+      if(error){
+          throw(error);
+      }else{
+          res.send(resultados);
+      }
+    });*/
 });
 // OTROS
 // 

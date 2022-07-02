@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import  { ServiceClienteService } from './../../servicios/service-cliente.service' ;
+//import {Session} from '../../class/session';
+//import {sesion2} from '../../interfaces/sesion';
+import { LoginUsuarioService } from 'src/app/servicios/login-usuario.service';
+
 
 @Component({
   selector: 'app-sesion-screen',
@@ -9,41 +12,72 @@ import  { ServiceClienteService } from './../../servicios/service-cliente.servic
 })
 
 export class SesionScreenComponent implements OnInit {
-  
    formGroup:FormGroup;
    mensaje:string="";
+   //token:string="";
+   //datos:Session[]=[];
 
-  constructor(private form:FormBuilder ,private servicioCliente:ServiceClienteService,) {
-        this.formGroup=this.form.group({
-        usuario:['',Validators.required],
-        contrasenia:['',Validators.required]
-       });
+  constructor(private form:FormBuilder ,private servicioUsuario:LoginUsuarioService) {
+    this.formGroup=this.form.group({
+      usuario:['',Validators.required],
+      contrasenia:['',Validators.required]
+     });
    }
 
   ngOnInit(): void {
-   let datos = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
-   if(datos != 'null'){
-    if(datos && datos.usuario){
-      window.location.href="/home"
+    let datos = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
+    if(datos != 'null'){
+     if(datos && datos.usuario){
+       window.location.href="/home"
+     }
     }
-   }
+  /*if(this.storage.obtenerusuarioactual() != null) {
+    window.location.href="/home"
+  } */
   }
   
+  
+
   validarlogin(){
-      this.servicioCliente.ValidarLogin(this.formGroup.get("usuario")?.value, this.formGroup.get("contrasenia")?.value).subscribe(datos=>{
+    this.servicioUsuario.ValidarLogin(this.formGroup.get("usuario")?.value, this.formGroup.get("contrasenia")?.value).subscribe(datos=>{
       console.log(datos);
 
       if(datos.length==0){
             this.mensaje="Error contraseña o email, intente de nuevo";
+            console.log(this.mensaje)
        }else{
         console.log(datos);
         localStorage.setItem('sitiomovil',JSON.stringify({"usuario":datos[0].correo,"id":datos[0].id}));
+        localStorage.setItem('usuario',JSON.stringify({"usuario":datos[0].correo}));
         this.mensaje="logueado correctamente";
         //datos={token:datos[0].id,usuario:datos[0].correo_electronico};
         //this.storage.CrearSession(datos);
         window.location.href="/home";
        }
-  })
-  };
-  
+  });
 }
+
+
+
+
+
+
+}
+
+    /*this.servicioUsuario.Token().subscribe(token=>{
+      //this.token=token;
+      this.servicioUsuario.ValidarLogin(this.formGroup.get("usuario")?.value, this.formGroup.get("contrasenia")?.value).subscribe(datos=>{
+       console.log(datos);
+       if(datos.length==0){
+             this.mensaje="Error al iniciar sesion, correo o contraseña no existe, intente de nuevo";
+        }else{
+          localStorage.setItem('sitiomovil',JSON.stringify({"usuario":datos[0].correo,"id":datos[0].id}));
+          //datos={token:datos[0].id,usuario:datos[0].correo_electronico};
+           //this.storage.crearsession(datos);
+           //window.location.href="/home";
+           this.mensaje="inicio de sesion correctamente";
+          console.log(datos);
+          }});
+ }*/
+
+
