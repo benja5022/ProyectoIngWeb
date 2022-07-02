@@ -15,28 +15,10 @@
         <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a>
         <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a>
         <a href="#" [routerLink]="['/inicioSesion']" class="nav-link">Iniciar Sesión</a>
+        <p> iniciado como {{getUsuario()}}</p>
+        <button class="btn-outline-success" type="submit" (click)="cerrarsesion()">Cerrar Sesion</button>
+        <!--<p> iniciada como {{getUsuario()}}</p>-->
       </div>
     </div>
   </div>
 </nav>
-
-
-<!-- <div class="container-fluid">
-    <header class="d-flex flex-wrap justify-content-center py-3">
-      <a href="#" [routerLink]="['/home']" > <img class="logo" src="./../../../assets/images/logo.png"> </a>
-      <a href="#" [routerLink]="['/home']" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-       
-        <span class="fs-4"> <b>PROCEAN</b></span>
-      </a>
-
-      <ul class="nav nav-pills">
-        <li class="nav-item"> <a href="#" [routerLink]="['/home']" class="nav-link">Inicio </a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/nuestrascampanas']" class="nav-link">Nuestra campaña</a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/sobrenosotros']" class="nav-link">Sobre nosotros</a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/ayudaoceano']"class="nav-link">Ayuda al oceano</a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/unete']"  class="nav-link">Recibe nuestras novedades</a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a></li>
-        <li class="nav-item"> <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a></li>
-      </ul>
-    </header>
-  </div> -->

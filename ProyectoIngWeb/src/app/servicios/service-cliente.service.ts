@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders , HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Donaciones } from '../interfaces/donaciones';
 import { Usuarios } from '../interfaces/usuarios';
+
 const HttpOption = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
@@ -11,13 +12,13 @@ const HttpOption = {
   providedIn: 'root'
 })
 export class ServiceClienteService {
+  //parte mati
 
   servidor = "http://127.0.0.1:3002";
 
   constructor(private servicio:HttpClient) {
-
   }
-
+  
   consultarDonador():Observable<any>{
     return this.servicio.get( `${this.servidor}/donar`);
   }
@@ -42,18 +43,5 @@ export class ServiceClienteService {
     return this.servicio.post( `${this.servidor}/unete`,JSON.stringify(usuario), HttpOption );
   }
 
-
-  ValidarLogin(usuario:string,contrasenia:string):Observable<any>{
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    console.log(usuario);
-    const params = new HttpParams();
-    params.set("usuario",usuario);
-    params.set("contrasenia", contrasenia);
-    //return this.servicio.get(`${this.servidor}/login`, {params:params} );
-    console.log(`${this.servidor}/login?usuario=${JSON.stringify(usuario)}&contrasenia=${JSON.stringify(contrasenia)}`);
-    return this.servicio.get(`${this.servidor}/login?usuario=${usuario}&contrasenia=${contrasenia}`);
-
-  }
 
 }
