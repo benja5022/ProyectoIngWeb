@@ -58,13 +58,12 @@ export class DonarScreenComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let datos2 = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
-    console.log(datos2);
-    if(datos2 == null){
+    let datos = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
+    console.log(datos);
+    if(datos == null){
       window.location.href="/sesion"
     }
-
-
+    
     this.servicioCliente.consultarDonador().subscribe(
       datos=> {
         for(let i = 0; i< datos.length; i++){
