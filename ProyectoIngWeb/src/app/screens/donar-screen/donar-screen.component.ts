@@ -74,7 +74,7 @@ export class DonarScreenComponent implements OnInit {
         for(let i = 0; i< datos.length; i++){
           this.donaciones.push(datos[i]);
         }
-        console.log(datos);
+        
       });
 
   }
@@ -82,7 +82,6 @@ export class DonarScreenComponent implements OnInit {
 
   public Seleccionardonador(donador: any){
     this.SeleccionDonador = donador;
-    console.log(this.SeleccionDonador)
   }
 
   public AgregarDonador(){

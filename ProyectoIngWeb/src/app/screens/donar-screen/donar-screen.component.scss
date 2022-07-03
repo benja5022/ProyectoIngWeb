@@ -8,6 +8,10 @@ $colorBase: #106BBF;
     overflow: hidden;
 }
 
+.card-body.text-white{
+    overflow: hidden;
+}
+
 
 
 .img-fluid {
@@ -83,4 +87,8 @@ li{
     list-style: none;
 }
 
+td, tr, th{
+    text-align: left;
+}
 
+$table-hover-color:rgba(39, 151, 179, 0.6);
