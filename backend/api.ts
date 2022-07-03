@@ -166,13 +166,13 @@ Modoseguro.use((req:any,res:any,next:any)=>{
 aplicacion.get('/login',(req:any,res:any)=>{
     const usuario= req.query.usuario;
     const contrasenia = req.query.contrasenia;
-    connection.query("select id,correo from usuarios where correo=? and contrasenia=md5(?)",[usuario,contrasenia],function(error:any,resultados:any,fields:any){
+    connection.query("select id,correo,nombre,tipo_usuario from usuarios where correo=? and contrasenia=md5(?)",[usuario,contrasenia],function(error:any,resultados:any,fields:any){
       if(error){
           throw(error);
       }else{
           res.send(resultados);
       }
-    });
+});
 
     /*const usuario= req.query.usuario;
     const contrasenia = req.query.contrasenia;

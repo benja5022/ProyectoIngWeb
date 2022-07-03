@@ -14,9 +14,16 @@
         <a href="#" [routerLink]="['/unete']"  class="nav-link">Recibe nuestras novedades</a>
         <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a>
         <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a>
-        <a href="#" [routerLink]="['/inicioSesion']" class="nav-link">Iniciar Sesión</a>
-        <p class = "nav-link"> iniciado como: {{getUsuario()}}</p>
-        <button class="btn-outline-danger" type="submit" (click)="cerrarsesion()">Cerrar Sesion</button>
+        
+        <li class="nav-item" *ngIf="!conexioncorrecta()">
+         <a href="#" [routerLink]="['/inicioSesion']" class="nav-link">Iniciar Sesión</a>
+        </li>
+        <li class="nav-item" *ngIf="conexioncorrecta()">
+          <p class = "nav-link"> {{tomarusuariologedo()}}</p>
+        </li>
+        <li class="nav-item" *ngIf="conexioncorrecta()">
+          <button class="btn-outline-danger" type="submit" (click)="cerrarsesion()">Cerrar Sesion</button>
+        </li>
         <!--<p> iniciada como {{getUsuario()}}</p>-->
       </div>
     </div>
