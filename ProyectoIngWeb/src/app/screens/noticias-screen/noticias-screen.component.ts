@@ -10,13 +10,11 @@ export class NoticiasScreenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
     let datos = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
-    console.log(datos);
+    //console.log(datos);
     if(datos == null){
       window.location.href="/inicioSesion";
     }
-
   }
 
 }

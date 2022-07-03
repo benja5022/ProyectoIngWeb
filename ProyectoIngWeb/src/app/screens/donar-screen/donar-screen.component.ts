@@ -5,7 +5,8 @@ import  { ServiceClienteService } from './../../servicios/service-cliente.servic
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Donaciones} from './../../interfaces/donaciones';
 import { FormBuilder,FormGroup } from '@angular/forms';
-
+import { Usuarios } from 'src/app/interfaces/usuarios';
+import { Cons } from 'rxjs';
 
 
 @Component({
@@ -16,7 +17,9 @@ import { FormBuilder,FormGroup } from '@angular/forms';
 
 
 export class DonarScreenComponent implements OnInit {
-
+  Tipousuario?:Usuarios;
+   admin:boolean=false;
+   tipo:number = 0;
   // coleccion: any = listaDePersonas;
   // public donadores: donadores2 [ ] = [ ];
   formulario:FormGroup = this.formu.group({
@@ -26,6 +29,7 @@ export class DonarScreenComponent implements OnInit {
     correo: "",
     monto: 0.0 
   });
+  
   public SeleccionDonador: Donaciones={
     id:0,
     nombre:"",
@@ -55,6 +59,33 @@ export class DonarScreenComponent implements OnInit {
   //    }
   //  this.SeleccionDonador = null;
   }
+ 
+  //funcion para los permisos de botones si es admin o usuario
+  usuariologueado(){
+    return this.Tipousuario = JSON.parse(localStorage.getItem("tipo" ) || 'null');
+  }
+  
+  comprobar(){
+    const usuario2 = this.usuariologueado();
+    //console.log(datos);
+    console.log(usuario2);
+    if(usuario2 != null){
+      this.adminOusuario();
+    }
+  }
+
+  adminOusuario(){
+    const usuario2 = this.usuariologueado();
+    this.tipo = usuario2.tipo_usuario;
+    console.log(this.tipo);
+    console.log(this.admin);
+      if(this.tipo == 2){
+        return this.admin = true;
+      }else{
+        return this.admin = false;
+      }
+  }
+
 
   ngOnInit(): void {
 
@@ -62,7 +93,7 @@ export class DonarScreenComponent implements OnInit {
       window.location.href="/inicioSesion"
     } */
     let datos2 = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
-    console.log(datos2);
+    //console.log(datos2);
     if(datos2 == null){
       window.location.href="/inicioSesion"
     }
@@ -74,7 +105,7 @@ export class DonarScreenComponent implements OnInit {
         for(let i = 0; i< datos.length; i++){
           this.donaciones.push(datos[i]);
         }
-        console.log(datos);
+        //console.log(datos);
       });
 
   }
@@ -82,7 +113,7 @@ export class DonarScreenComponent implements OnInit {
 
   public Seleccionardonador(donador: any){
     this.SeleccionDonador = donador;
-    console.log(this.SeleccionDonador)
+    //console.log(this.SeleccionDonador)
   }
 
   public AgregarDonador(){
@@ -94,7 +125,7 @@ export class DonarScreenComponent implements OnInit {
       correo: this.formulario.get("correo")?.value,
       monto: parseFloat(this.formulario.get("monto")?.value)  
     }).subscribe(respuesta=>{
-      console.log(respuesta);
+      //console.log(respuesta);
     });
 
     // let donador = {
@@ -125,7 +156,7 @@ export class DonarScreenComponent implements OnInit {
   public EliminarDonador(){
 
     this.servicioCliente.eliminarDonador(this.SeleccionDonador.id).subscribe(data =>{
-      console.log("Respuesta eliminar: " + data);
+      //console.log("Respuesta eliminar: " + data);
     });
 
     // for(let i = 0; i< this.donadores.length;i++){
@@ -147,7 +178,7 @@ export class DonarScreenComponent implements OnInit {
       correo: this.formulario.get("correo")?.value,
       monto: parseFloat(this.formulario.get("monto")?.value)  
     }).subscribe(data =>{
-      console.log("Respuesta put: " + data);
+      //console.log("Respuesta put: " + data);
     });
 
     // this.httpClient.put("http://127.0.0.1:3002" + endPoint +this.SeleccionDonador.id,{

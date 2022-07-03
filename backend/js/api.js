@@ -126,7 +126,7 @@ Modoseguro.use((req:any,res:any,next:any)=>{
 aplicacion.get('/login', (req, res) => {
     const usuario = req.query.usuario;
     const contrasenia = req.query.contrasenia;
-    connection.query("select id,correo from usuarios where correo=? and contrasenia=md5(?)", [usuario, contrasenia], function (error, resultados, fields) {
+    connection.query("select id,correo,nombre,tipo_usuario from usuarios where correo=? and contrasenia=md5(?)", [usuario, contrasenia], function (error, resultados, fields) {
         if (error) {
             throw (error);
         }
