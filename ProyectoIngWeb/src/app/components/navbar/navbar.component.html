@@ -15,8 +15,8 @@
         <a href="#" [routerLink]="['/noticias']" class="nav-link">Noticias</a>
         <a href="#" [routerLink]="['/donar']" class="nav-link">Donación</a>
         <a href="#" [routerLink]="['/inicioSesion']" class="nav-link">Iniciar Sesión</a>
-        <p> iniciado como {{getUsuario()}}</p>
-        <button class="btn-outline-success" type="submit" (click)="cerrarsesion()">Cerrar Sesion</button>
+        <p class = "nav-link"> iniciado como: {{getUsuario()}}</p>
+        <button class="btn-outline-danger" type="submit" (click)="cerrarsesion()">Cerrar Sesion</button>
         <!--<p> iniciada como {{getUsuario()}}</p>-->
       </div>
     </div>

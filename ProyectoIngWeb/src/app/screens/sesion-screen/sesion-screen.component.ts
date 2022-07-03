@@ -47,6 +47,7 @@ export class SesionScreenComponent implements OnInit {
         localStorage.setItem('sitiomovil',JSON.stringify({"usuario":datos[0].correo,"id":datos[0].id}));
         localStorage.setItem('usuario',JSON.stringify({"nombre":datos[0].correo}));
         this.mensaje="logueado correctamente";
+        window.location.href="/home"
        }
   });
 }

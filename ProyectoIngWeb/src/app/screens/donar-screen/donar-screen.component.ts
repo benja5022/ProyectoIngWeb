@@ -61,11 +61,13 @@ export class DonarScreenComponent implements OnInit {
     /*if(this.storage.obtenerusuarioactual() == null) {
       window.location.href="/inicioSesion"
     } */
-    let datos2 = JSON.parse(localStorage.getItem('sitiomovil') || '{}');
+    let datos2 = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
     console.log(datos2);
     if(datos2 == null){
       window.location.href="/inicioSesion"
     }
+
+    
 
     this.servicioCliente.consultarDonador().subscribe(
       datos=> {
