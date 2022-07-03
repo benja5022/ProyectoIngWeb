@@ -36,9 +36,9 @@ const puerto = 3002;
 
 let connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'admin',
+    user     : 'root',
     port     : 3306,
-    password : '1234',
+    password : '',
     database : 'procean'
 });
 
@@ -166,6 +166,7 @@ Modoseguro.use((req:any,res:any,next:any)=>{
 aplicacion.get('/login',(req:any,res:any)=>{
     const usuario= req.query.usuario;
     const contrasenia = req.query.contrasenia;
+
     connection.query("select id,correo,nombre,tipo_usuario from usuarios where correo=? and contrasenia=md5(?)",[usuario,contrasenia],function(error:any,resultados:any,fields:any){
       if(error){
           throw(error);

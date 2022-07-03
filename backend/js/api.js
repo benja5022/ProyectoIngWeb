@@ -22,9 +22,9 @@ const puerto = 3002;
 // configuración de la conexion
 let connection = mysql.createConnection({
     host: 'localhost',
-    user: 'admin',
+    user: 'root',
     port: 3306,
-    password: '1234',
+    password: '',
     database: 'procean'
 });
 connection.connect(function (error, results, fields) {

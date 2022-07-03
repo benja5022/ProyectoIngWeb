@@ -28,6 +28,7 @@
                     <tr *ngFor="let donador of donaciones"
                     (click)="Seleccionardonador(donador)" 
                   [ngClass]="{'active':SeleccionDonador === donador}">
+
                       <th class="table-primary">
                         {{donador.nombre}}
                       </th>
@@ -96,8 +97,14 @@
               </ul>
 
               <ul>
-                <li><button type="submit" (click)="onSubmit('submit')" class="btn btn-success form-control mb-1">Agregar</button></li>
-                <li><button type="submit" (click)="onSubmit('update')" class="btn btn-warning form-control mb-1">Actualizar</button></li>
+
+                <button type="submit" (click)="onSubmit('submit')" class="btn btn-success form-control mb-1">Agregar</button>
+
+                
+                <li class="nav-item" *ngIf="adminOusuario()">
+                  <button type="submit" (click)="onSubmit('update')" class="btn btn-warning form-control mb-1">Actualizar</button>
+                </li>
+                
                 
                 <li class="nav-item" *ngIf="adminOusuario()">
                   <button type="submit" (click)="onSubmit('delete')" class="btn btn-danger form-control mb-1">Eliminar</button>
