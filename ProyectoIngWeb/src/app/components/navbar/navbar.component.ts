@@ -21,12 +21,15 @@ export class NavbarComponent implements OnInit {
    
   }
   getUsuario(){
-    this.usuario = JSON.parse(localStorage.getItem('usuario') || "");
+    this.usuario = JSON.parse(localStorage.getItem('usuario') || "{}");
     console.log(this.usuario);
   }
+
   cerrarsesion(){
     localStorage.removeItem('sitiomovil');
+    localStorage.removeItem('usuario');
     window.location.href="/inicioSesion";
   }
+ 
 
 }

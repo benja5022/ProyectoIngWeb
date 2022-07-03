@@ -14,6 +14,7 @@ import { LoginUsuarioService } from 'src/app/servicios/login-usuario.service';
 export class SesionScreenComponent implements OnInit {
    formGroup:FormGroup;
    mensaje:string="";
+   nombre:string ="";
    //token:string="";
    //datos:Session[]=[];
 
@@ -25,34 +26,27 @@ export class SesionScreenComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    let datos = JSON.parse(localStorage.getItem('sitiomovil') || 'null');
-    if(datos != 'null'){
+    let datos = JSON.parse(localStorage.getItem('sitiomovil') || "{}");
+    console.log(datos);
+    if(datos !='{}'){
      if(datos && datos.usuario){
-       window.location.href="/home"
+      window.location.href="/home"
      }
     }
-  /*if(this.storage.obtenerusuarioactual() != null) {
-    window.location.href="/home"
-  } */
   }
-  
   
 
   validarlogin(){
     this.servicioUsuario.ValidarLogin(this.formGroup.get("usuario")?.value, this.formGroup.get("contrasenia")?.value).subscribe(datos=>{
       console.log(datos);
-
       if(datos.length==0){
             this.mensaje="Error contraseña o email, intente de nuevo";
             console.log(this.mensaje)
        }else{
         console.log(datos);
         localStorage.setItem('sitiomovil',JSON.stringify({"usuario":datos[0].correo,"id":datos[0].id}));
-        localStorage.setItem('usuario',JSON.stringify({"usuario":datos[0].correo}));
+        localStorage.setItem('usuario',JSON.stringify({"nombre":datos[0].correo}));
         this.mensaje="logueado correctamente";
-        //datos={token:datos[0].id,usuario:datos[0].correo_electronico};
-        //this.storage.CrearSession(datos);
-        window.location.href="/home";
        }
   });
 }

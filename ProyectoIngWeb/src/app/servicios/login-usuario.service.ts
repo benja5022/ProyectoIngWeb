@@ -15,7 +15,7 @@ export class LoginUsuarioService {
 
  
 //validar la sesion 
-  ValidarLogin(usuario:string,contrasenia:string, ):Observable<any>{
+  ValidarLogin(usuario:string,contrasenia:string):Observable<any>{
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     console.log(usuario);
@@ -24,21 +24,6 @@ export class LoginUsuarioService {
     params.set("contrasenia", contrasenia);
     console.log(`${this.servidor}/login?usuario=${JSON.stringify(usuario)}&contrasenia=${JSON.stringify(contrasenia)}`);
     return this.servicio.get(`${this.servidor}/login?usuario=${usuario}&contrasenia=${contrasenia}`);
-   
   }
 
-  /*CerrarSession(usuario:string,contrasenia:string):Observable<any>{
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
-    console.log(usuario);
-    const params = new HttpParams();
-    params.set("usuario",usuario);
-    params.set("usuario", contrasenia);
-    this.router.navigate(['/home']);
-    return this.servicio.clear(`${this.servidor}/login?usuario=${usuario}&contrasenia=${contrasenia}`);
-  }*/
-   //el token
-   /*Token():Observable<any>{
-    return this.servicio.get(`${this.servidor}/token`)
-    }*/
 }

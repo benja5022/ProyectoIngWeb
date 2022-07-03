@@ -36,9 +36,9 @@ const puerto = 3002;
 
 let connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'benja',
+    user     : 'admin',
     port     : 3306,
-    password : '123',
+    password : '1234',
     database : 'procean'
 });
 
