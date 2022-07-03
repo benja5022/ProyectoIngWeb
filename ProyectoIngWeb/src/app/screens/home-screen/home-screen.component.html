@@ -28,36 +28,40 @@
       <!--final carrucel-->
        <br>
     <!--Noticias-->
-      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
-        <h1 class="card-title mb-0">Noticias</h1>
-        <img src="./../../../assets/images/animalPetro.jpg" class="bg-image w-25 h-100 float-start rounded-circle" style="margin-left: 15%; margin-top: -2%;"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">
-          Ejemplo de noticia numero 1
-        </p>
-      </div>
-      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
-        <img src="./../../../assets/images/petroleo.jpg" class="bg-image w-25 h-100 float-start rounded-circle" style="margin-left: 15%;margin-top: 0.5%;"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">
-          Ejemplo de noticia numero 2
-        </p>
-        <a a href="#" [routerLink]="['/noticias']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Mas noticias</a>
-      </div>
-      <br>
-      <!--sobre nosotros-->
-      <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
-        <h1 class="card-title mb-0">Sobre nosotros</h1>
-        <p class="card-text text-center "style=" margin-top: 2%;">
-         Ejemplo de texto sobre nosotros
-        </p>
-        <a a href="#" [routerLink]="['/sobrenosotros']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
-      </div>
-      <br>
-     <!--Nuestra Mision-->
-     <div class="card-body text-white "  style="background-color: rgba(83, 182, 207, 0.6); height: 25vh;" >
-      <h1 class="card-title mb-0">Nuestras Campañas</h1>
-      <p class="card-text text-center "style=" margin-top: 2%;">
-        Descripción breve sobre nuestras campañas
-      </p>
+      <div class="card bg-success text-white text-whitep-5 mb-4">
+          <div class="card-body">
+          <h1 class="card-title">Noticias</h1> 
+          <img src="./../../../assets/images/animalPetro.jpg" class="bg-image w-25 h-100 float-start rounded-circle"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">  
+          <p class="card-text text-white" style="margin-left: 30%;">¿De verdad quieres que esto le pase pase a los inocentes animales marinos?</p>
+          </div>
 
-      <a a href="#" [routerLink]="['/nuestrascampanas']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
+          <div class="card-body">
+            <img src="./../../../assets/images/petroleo.jpg" class="bg-image w-25 h-100 float-start rounded-circle"><p class="card-text text-center " style="margin-right: 15%; margin-top: 5%;">
+            <p class="card-text" style="margin-left: 30%"> Para el petóleo. Ayuda a proteger a los habitantes del mar</p> 
+          </div>
+            <div class="card-body">
+              <a a href="#" [routerLink]="['/noticias']" class="btn btn-outline-light float-end">Mas noticias</a>
+            </div>
+        </div>
+
+
+      <!--sobre nosotros-->
+      <div class="card bg-success p-5 mb-4 text-white">
+        <div class="card-body">
+          <h1 class="card-title">Sobre Nosotros</h1>
+          <p class="card-text"> Ve con más detalle en qué consiste nuestra labor</p>
+          <a a href="#" [routerLink]="['/sobrenosotros']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
+        </div>
+      </div>
+
+     
+     <!--Nuestra Campaña-->
+     <div class="card bg-success p-5 mb-4 text-white">
+      <div class="card-body">
+        <h1 class="card-title">Nuestras Campañas</h1>
+        <p class="card-text"> Aquí están algunos de los tratados que prueban que nuestro trabajo da frutos.</p>
+        <a a href="#" [routerLink]="['/nuestrascampanas']" class="btn btn-outline-light float-end" style="margin-top: -2%;">Seguir leyendo</a>
+      </div>
     </div>
-    <!--final image-->
+
     </div> 
